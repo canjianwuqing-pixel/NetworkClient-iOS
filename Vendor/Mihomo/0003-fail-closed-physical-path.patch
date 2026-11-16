@@ -1,0 +1,75 @@
+--- a/bind/clash/hook.go
++++ b/bind/clash/hook.go
+@@ -1,6 +1,7 @@
+ package clash
+ 
+ import (
++	"errors"
+ 	"net"
+ 	"net/netip"
+ 	"syscall"
+@@ -36,6 +37,10 @@
+ 
+ var noPathDialsLogged atomic.Bool
+ 
++// ErrNoPhysicalPath prevents public outbound sockets from silently falling
++// back to the tunnel's unscoped default route during startup or path loss.
++var ErrNoPhysicalPath = errors.New("no verified physical network path")
++
+ func installSocketHook(platform PlatformInterface) {
+ 	installPhysicalAddressTransform(platform != nil)
+ 	if platform == nil || !platform.UsePlatformAutoDetectInterfaceControl() {
+@@ -50,9 +55,9 @@
+ 		}
+ 		if publishedInterfaceIndex.Load() == 0 {
+ 			if noPathDialsLogged.CompareAndSwap(false, true) {
+-				log.Warnln("[Apple] no physical path is published; outbound sockets dial unbound until one is, rather than failing")
++				log.Warnln("[Apple] no physical path is published; outbound socket refused")
+ 			}
+-			return nil
++			return ErrNoPhysicalPath
+ 		}
+ 		noPathDialsLogged.Store(false)
+ 		var ctrlErr error
+--- a/bind/clash/hook_test.go
++++ b/bind/clash/hook_test.go
+@@ -1,6 +1,7 @@
+ package clash
+ 
+ import (
++	"errors"
+ 	"net"
+ 	"syscall"
+ 	"testing"
+@@ -83,6 +84,11 @@
+ 	if platform.gotFd <= 0 {
+ 		t.Fatalf("AutoDetectControl got fd %d, want a valid descriptor", platform.gotFd)
+ 	}
++	bindFailure := errors.New("interface binding failed")
++	platform.controlErr = bindFailure
++	if err := dialer.DefaultSocketHook("udp", "1.1.1.1:53", raw); !errors.Is(err, bindFailure) {
++		t.Fatalf("a failed physical bind must reject the dial, got %v", err)
++	}
+ }
+ 
+ func TestSocketHookLeavesLoopbackUnscoped(t *testing.T) {
+@@ -156,7 +162,7 @@
+ 	}
+ }
+ 
+-func TestSocketHookDialsUnboundWhenNoPathIsPublished(t *testing.T) {
++func TestSocketHookRejectsPublicDialWhenNoPathIsPublished(t *testing.T) {
+ 	orig := dialer.DefaultSocketHook
+ 	origTransform := dialer.DefaultAddressTransform
+ 	previousIndex := publishedInterfaceIndex.Load()
+@@ -197,8 +203,8 @@
+ 	publishedInterfaceIndex.Store(0)
+ 	noPathDialsLogged.Store(false)
+ 	before := platform.callCount
+-	if err := dialer.DefaultSocketHook("tcp", routable, rawConnOf(t)); err != nil {
+-		t.Fatalf("with no published path the dial must proceed unbound, got %v", err)
++	if err := dialer.DefaultSocketHook("tcp", routable, rawConnOf(t)); !errors.Is(err, ErrNoPhysicalPath) {
++		t.Fatalf("with no published path the dial must fail closed, got %v", err)
+ 	}
+ 	if platform.callCount != before {
+ 		t.Fatal("with no published path the platform must not be asked to scope the socket")

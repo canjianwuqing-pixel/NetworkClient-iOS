@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BrandBootstrapResource</key>
+	<string>$(BRAND_BOOTSTRAP_RESOURCE)</string>
+	<key>BrandFixtureProfilesResource</key>
+	<string>$(BRAND_FIXTURE_PROFILES_RESOURCE)</string>
+	<key>BrandLocalLogoResource</key>
+	<string>$(BRAND_LOCAL_LOGO_RESOURCE)</string>
+	<key>BrandNetworkResource</key>
+	<string>$(BRAND_NETWORK_RESOURCE)</string>
+	<key>BrandThemeResource</key>
+	<string>$(BRAND_THEME_RESOURCE)</string>
+	<key>UIFixtureResource</key>
+	<string>$(UI_FIXTURE_RESOURCE)</string>
+	<key>TunnelAppGroup</key>
+	<string>$(NETWORK_APP_GROUP_ID)</string>
+	<key>TunnelExtensionBundleID</key>
+	<string>$(NETWORK_PACKET_TUNNEL_BUNDLE_ID)</string>
+	<key>TunnelDoHEndpoint</key>
+	<string>https://1.1.1.1/dns-query</string>
+</dict>
+</plist>

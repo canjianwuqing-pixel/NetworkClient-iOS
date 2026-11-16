@@ -1,0 +1,56 @@
+{
+  "account": {
+    "email": "ui-preview@example.invalid",
+    "authData": "offline-fixture-not-credential",
+    "accountToken": null,
+    "subscriptionURL": "https://subscription.example.invalid/ui-fixture",
+    "uploadBytes": 5368709120,
+    "downloadBytes": 42949672960,
+    "transferEnableBytes": 107374182400,
+    "expiredAt": 1800000000,
+    "planID": 1,
+    "planName": "标准套餐 · 界面样本",
+    "balanceCents": 1200,
+    "verifiedAt": 0
+  },
+  "plans": [
+    {
+      "id": 1,
+      "name": "标准套餐 · 界面样本",
+      "features": [
+        "每月 100 GB 流量",
+        "多地区优选线路",
+        "支持多设备使用",
+        "在线客服支持",
+        "流媒体加速",
+        "智能线路切换"
+      ],
+      "cycles": [
+        {
+          "period": "month_price",
+          "price": 1800
+        },
+        {
+          "period": "quarter_price",
+          "price": 5000
+        },
+        {
+          "period": "year_price",
+          "price": 18000
+        },
+        {
+          "period": "onetime_price",
+          "price": 9800
+        }
+      ]
+    }
+  ],
+  "notice": {
+    "id": 1,
+    "title": "客户端使用说明 · 离线样本",
+    "content": "此页面使用离线界面样本，无真实账户、订单或 VPN 连接。",
+    "imageURL": null,
+    "tags": [],
+    "createdAt": 1792627200
+  }
+}

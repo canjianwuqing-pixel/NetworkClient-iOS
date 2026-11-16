@@ -1,0 +1,8 @@
+# GeoData payloads and upstream patch files are reviewed by their hashes.
+NetworkPacketTunnel/GeoData/*.dat -diff
+NetworkPacketTunnel/GeoData/*.metadb -diff
+NetworkPacketTunnel/GeoData/*.mrs -diff
+Vendor/Mihomo/*.patch -diff
+
+# Preserve vendored source and third-party license text byte-for-byte.
+Vendor/** -whitespace

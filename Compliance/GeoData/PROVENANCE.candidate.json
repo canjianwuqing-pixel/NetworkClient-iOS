@@ -1,0 +1,66 @@
+{
+  "approval": {
+    "redistributionApproved": false,
+    "reviewReference": null,
+    "reviewedAt": null,
+    "reviewer": null
+  },
+  "artifacts": {
+    "cn.mrs": {
+      "category": "cn",
+      "generatorCommit": "34d0a954c50a9233bc216e3cb73a016397fdad5b",
+      "generatorFunction": "component/geodata.CompileGeoSite",
+      "generatorLicense": "GPL-3.0-only",
+      "generatorLicenseURL": "https://github.com/ProjectClash/Clash/blob/34d0a954c50a9233bc216e3cb73a016397fdad5b/LICENSE",
+      "generatorRepo": "https://github.com/ProjectClash/Clash.git",
+      "generatorTag": "v1.19.33-clash.2",
+      "inputGeositeSHA256": "02ad51927d05608b672bbcdf37f37b94ce1fdb7dcd10852f367ed457ad56280b",
+      "outputSHA256": "ffb5b4311029519a52066711a75a38a5f27d9aa6357778342429babe21cff92c",
+      "outputSize": 44940,
+      "reproducibilityVerified": true
+    },
+    "geoip.metadb": {
+      "archiveFilename": "dbip-country-lite-2026-11.mmdb.gz",
+      "archiveSHA256": "75fe430010f6d38a8c4331c202bf0df6ce3221a6e6d823b9e5a6d951e4cf9758",
+      "databaseType": "DBIP-Country-Lite",
+      "officialURL": "https://download.db-ip.com/free/dbip-country-lite-2026-11.mmdb.gz",
+      "outputSHA256": "145ce5dfb812d8de28547e6289bb5c5f8b3df2f1dea21d324d5b575e0431311f",
+      "outputSize": 8515063,
+      "sourceLicense": "CC-BY-4.0",
+      "sourceName": "DB-IP Country Lite",
+      "sourcePayloadSHA256": "145ce5dfb812d8de28547e6289bb5c5f8b3df2f1dea21d324d5b575e0431311f",
+      "sourceVersion": "2026-11",
+      "transformation": "gzip decompression and rename only; database bytes are unchanged"
+    },
+    "geosite.dat": {
+      "generatorCommand": "go run ./ --outputdir=<stage> --outputname=geosite.dat",
+      "goVersion": "1.26.10",
+      "outputSHA256": "02ad51927d05608b672bbcdf37f37b94ce1fdb7dcd10852f367ed457ad56280b",
+      "outputSize": 2414151,
+      "reproducibilityVerified": true,
+      "sourceCommit": "777d056afe68b2643c1ef15f80e7bde3dfa149b1",
+      "sourceLicense": "MIT",
+      "sourceRepo": "https://github.com/v2fly/domain-list-community.git"
+    }
+  },
+  "licenses": {
+    "CC-BY-4.0": {
+      "appliesTo": [
+        "geoip.metadb"
+      ],
+      "file": "LICENSES/DB-IP-Lite-CC-BY-4.0.txt",
+      "sourceURL": "https://creativecommons.org/licenses/by/4.0/legalcode.txt",
+      "textSHA256": "9e5f1b3c610b9c2da5c313bf81d577a7d1acec686bdb0384edefa6df0f90cd94"
+    },
+    "MIT": {
+      "appliesTo": [
+        "geosite.dat",
+        "cn.mrs source data"
+      ],
+      "file": "LICENSES/v2fly-domain-list-community-MIT.txt",
+      "sourceURL": "https://github.com/v2fly/domain-list-community/blob/777d056afe68b2643c1ef15f80e7bde3dfa149b1/LICENSE",
+      "textSHA256": "b9d84a22870d3f21c91a4c6e410c9cc51d00902f5233ad0c84011479244bf7d2"
+    }
+  },
+  "schemaVersion": 2
+}

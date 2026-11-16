@@ -1,0 +1,1815 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A0C100000000000000000001 /* Resources/PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = A0C100000000000000000003 /* Resources/PrivacyInfo.xcprivacy */; };
+		A0C100000000000000000002 /* Resources/PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = A0C100000000000000000003 /* Resources/PrivacyInfo.xcprivacy */; };
+		A0C100000000000000000004 /* NetworkPacketTunnel/PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = A0C100000000000000000005 /* NetworkPacketTunnel/PrivacyInfo.xcprivacy */; };
+		A0B400000000000000000001 /* GeneratedBrandAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0B400000000000000000003 /* GeneratedBrandAssets.xcassets */; };
+		A0B400000000000000000002 /* GeneratedBrandAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0B400000000000000000003 /* GeneratedBrandAssets.xcassets */; };
+		E10000000000000000000001 /* SharedDomain/AppUpdateModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000000101 /* SharedDomain/AppUpdateModels.swift */; };
+		E10000000000000000000002 /* SharedDomain/AppUpdateModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000000101 /* SharedDomain/AppUpdateModels.swift */; };
+		E10000000000000000000003 /* SharedServices/AppUpdateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000000102 /* SharedServices/AppUpdateService.swift */; };
+		E10000000000000000000004 /* SharedServices/AppUpdateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000000000000000000102 /* SharedServices/AppUpdateService.swift */; };
+		F1B600000000000000000001 /* App/GlobalModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B600000000000000000004 /* App/GlobalModal.swift */; };
+		F1B600000000000000000002 /* App/GlobalModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B600000000000000000004 /* App/GlobalModal.swift */; };
+		F1B600000000000000000003 /* Tests/GlobalModalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B600000000000000000005 /* Tests/GlobalModalTests.swift */; };
+		A5B100000000000000000001 /* IPv4CaptureRouteBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B100000000000000000004 /* IPv4CaptureRouteBuilder.swift */; };
+		A5B100000000000000000002 /* IPv4CaptureRouteBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B100000000000000000004 /* IPv4CaptureRouteBuilder.swift */; };
+		A5B100000000000000000003 /* IPv4CaptureRouteBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B100000000000000000005 /* IPv4CaptureRouteBuilderTests.swift */; };
+		F3C100000000000000000001 /* MihomoTunnelStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C100000000000000000002; };
+		CDF4D2ADCEAEE731D6EFA4B6 /* ProviderRuntime.swift in Sources */ = {isa = PBXBuildFile; fileRef = F489951D7EB021646CDB5290; };
+		CE897E30F29451E03E868100 /* ProviderRuntime.swift in Sources */ = {isa = PBXBuildFile; fileRef = F489951D7EB021646CDB5290; };
+		F26000000000000000000001 /* MihomoTunnelControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26000000000000000000004 /* MihomoTunnelControl.swift */; };
+		F26000000000000000000002 /* MihomoTunnelControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26000000000000000000004 /* MihomoTunnelControl.swift */; };
+		F26000000000000000000003 /* MihomoTunnelControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26000000000000000000004 /* MihomoTunnelControl.swift */; };
+		F26000000000000000000005 /* MihomoTunnelControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26000000000000000000004 /* MihomoTunnelControl.swift */; };
+		F26000000000000000000006 /* MihomoTunnelControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26000000000000000000007 /* MihomoTunnelControlTests.swift */; };
+		A21000000000000000000001 /* GeoDataManifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21000000000000000000101 /* GeoDataManifest.swift */; };
+		A21000000000000000000002 /* GeoDataManifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21000000000000000000101 /* GeoDataManifest.swift */; };
+		A21000000000000000000003 /* GeoDataManifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21000000000000000000101 /* GeoDataManifest.swift */; };
+		A21000000000000000000004 /* GeoDataReadiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21000000000000000000102 /* GeoDataReadiness.swift */; };
+		A21000000000000000000005 /* GeoDataReadiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21000000000000000000102 /* GeoDataReadiness.swift */; };
+		A21000000000000000000006 /* GeoDataReadiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21000000000000000000102 /* GeoDataReadiness.swift */; };
+		A21000000000000000000007 /* GeoDataPreparer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21000000000000000000103 /* GeoDataPreparer.swift */; };
+		A21000000000000000000008 /* GeoDataPreparer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21000000000000000000103 /* GeoDataPreparer.swift */; };
+		A4F100000000000000000001 /* NetworkInterfaceInventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F100000000000000000003; };
+		A4F100000000000000000002 /* NetworkInterfaceInventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F100000000000000000003; };
+		F3F100000000000000000004 /* ProviderRuntimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F100000000000000000005; };
+		A21000000000000000000021 /* GeoDataArchitectureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21000000000000000000105 /* GeoDataArchitectureTests.swift */; };
+		F1A500000000000000000001 /* NETunnelProviderAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD33FC85769E39C84729C01 /* NETunnelProviderAccess.swift */; };
+		F1A500000000000000000002 /* NetworkPacketTunnel.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 35D4ECAA7FBE25DF727661A4 /* NetworkPacketTunnel.appex */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy); }; };
+		B15000000000000000000008 /* Resources/NetworkEndpoints.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D7568F73DA8FFBBD93D5073 /* Resources/NetworkEndpoints.json */; };
+		A21000000000000000000014 /* PROVENANCE.json in Resources */ = {isa = PBXBuildFile; fileRef = A21000000000000000000104 /* PROVENANCE.json */; };
+		A21000000000000000000018 /* PROVENANCE.json in Resources */ = {isa = PBXBuildFile; fileRef = A21000000000000000000104 /* PROVENANCE.json */; };
+		0F1E2D3C4B5A697887770001 /* MihomoBridgeConcurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1E2D3C4B5A697887760001; };
+		0F1E2D3C4B5A697887770002 /* MihomoCoreBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1E2D3C4B5A697887760002; };
+		0F1E2D3C4B5A697887770003 /* AppOnlyRecoveryRuntime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1E2D3C4B5A697887760003; };
+		0F1E2D3C4B5A697887770004 /* RecoveryNodeMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1E2D3C4B5A697887760004; };
+		0F1E2D3C4B5A697887770005 /* BuiltInProxyBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1E2D3C4B5A697887760005; };
+		0F1E2D3C4B5A697887770006 /* MihomoAppPlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F1E2D3C4B5A697887760006; };
+		0F1E2D3C4B5A69788777000A /* MihomoRecoveryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1E2D3C4B5A69788776000A; };
+		0011A4644FBA383A7496DA04 /* Tests/SubscriptionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADE90BCB0F80D63AB2EEB78 /* Tests/SubscriptionTests.swift */; };
+		0270DE2D961040856BF4CED0 /* SharedServices/SubscriptionParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAABCBF60F5532C0306C8FD2 /* SharedServices/SubscriptionParser.swift */; };
+		04BD6174B2CDD94B935669C8 /* iOSAdapters/SafeLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77426F00801ABFE5D7F29FFE /* iOSAdapters/SafeLog.swift */; };
+		05428844324BAEB9028AF891 /* Tests/BrandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD160601D79711BB1D1AD353 /* Tests/BrandTests.swift */; };
+		0638C4DF07132F0D2F7ABB4F /* App/Views/AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20242C47392A28B48E0D52D0 /* App/Views/AuthView.swift */; };
+		06868318DD5FA489F4E0154E /* SharedDomain/ProxyNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A93CB3D6C48EB2803C6A23 /* SharedDomain/ProxyNode.swift */; };
+		08920770699BCD29D8587B5E /* Resources/Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFEF8106816C9945F23BAA2E /* Resources/Assets.xcassets */; };
+		08DF752E40AD7AA379B1BF56 /* Tests/BusinessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA104DE931E27BF277F0B54D /* Tests/BusinessTests.swift */; };
+		0B1071CDBABC2A3A0BED4255 /* App/Views/RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148CDC0B8DB96F05181BDE2A /* App/Views/RootView.swift */; };
+		1225C4D625F6D5F8EAAD7DC8 /* SharedDomain/HomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87819F9DC75FB5086F6B8524 /* SharedDomain/HomeModels.swift */; };
+		1392DD8C8F3BB73B549EEF71 /* App/Views/NodesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC20B9C19C4FAE04EC0B627 /* App/Views/NodesView.swift */; };
+		24829B1049C3198927E80954 /* SharedServices/Contracts/NodeRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A92E496627EFBD73265E47 /* SharedServices/Contracts/NodeRepositoryProtocol.swift */; };
+		249EC37D0FDEC4C3C070F864 /* SharedServices/SupportLinkResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C7748EB857B07098ECC9E1 /* SharedServices/SupportLinkResolver.swift */; };
+		2B1803062D924939CA284C82 /* App/BrandUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B924D2B06E59457C92C1167 /* App/BrandUI.swift */; };
+		2BFCCB93B9D494C49FD9A5E5 /* App/Views/ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AC22C5DC8F8F4F9311B920 /* App/Views/ProfileView.swift */; };
+		34B205E0EAB916ED09AD00B1 /* SharedDomain/ParsedSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFFF8D242E3ED596C047CA6 /* SharedDomain/ParsedSubscription.swift */; };
+		3614B6B21ACCEC0AB18028FA /* SharedServices/V2BoardAPIErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0521E0816B2E2FA79C2D1D97 /* SharedServices/V2BoardAPIErrorParser.swift */; };
+		36A974B244C805B881461178 /* SharedDomain/UserLogEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAE66C5E8D436419D1128A2 /* SharedDomain/UserLogEntry.swift */; };
+		37D1BFF4220D8813CBB6E501 /* SharedServices/PendingPaymentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36021A082A0AE5923CE6358 /* SharedServices/PendingPaymentStore.swift */; };
+		3CDD80BBCE7F9BBAD261C628 /* App/AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A4B5587D070B8F12ADB381 /* App/AppModel.swift */; };
+		A56F9C6A92184C8DAB110001 /* App/NodeSessionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56F9C6A92184C8DAB110003 /* App/NodeSessionCoordinator.swift */; };
+		A56F9C6A92184C8DAB110002 /* App/NodeSessionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56F9C6A92184C8DAB110003 /* App/NodeSessionCoordinator.swift */; };
+		A56F9C6A92184C8DAB110004 /* App/NodeLatencyCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56F9C6A92184C8DAB110006 /* App/NodeLatencyCoordinator.swift */; };
+		A56F9C6A92184C8DAB110005 /* App/NodeLatencyCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56F9C6A92184C8DAB110006 /* App/NodeLatencyCoordinator.swift */; };
+		F3A100000000000000000001 /* App/MinimalVPNController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A100000000000000000003 /* App/MinimalVPNController.swift */; };
+		F3A100000000000000000002 /* App/MinimalVPNController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A100000000000000000003 /* App/MinimalVPNController.swift */; };
+		F3A100000000000000000004 /* Tests/MinimalVPNControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A100000000000000000005 /* Tests/MinimalVPNControllerTests.swift */; };
+		3CFBD4A25900FAD120480F53 /* iOSAdapters/SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7378B3378F56C00293D705D /* iOSAdapters/SessionStore.swift */; };
+		44D9F2AE347D49393013FF1F /* Resources/BrandTheme.json in Resources */ = {isa = PBXBuildFile; fileRef = 766F1C52E00478D753230C84 /* Resources/BrandTheme.json */; };
+		4842E70136CD5B323186A247 /* SharedDomain/ProxyMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF4F376D55A2DF23CC368A5 /* SharedDomain/ProxyMode.swift */; };
+		48DBA6AF0809418DA3DE2211 /* SharedDomain/PurchaseCommerceModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9357DF4B87BBB7FEEB8932 /* SharedDomain/PurchaseCommerceModels.swift */; };
+		48EEF959222DBEA65BE807C0 /* iOSAdapters/BrandProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4A12359C28070C9E7F4215 /* iOSAdapters/BrandProvider.swift */; };
+		4A1873C8AB7DCFC8FA595FEF /* UITests/LaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF74AC17C4D2FB331F6FA9EB /* UITests/LaunchTests.swift */; };
+		513F1006E3F0D441101B469A /* SharedServices/V2BoardAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99BEE8B42196BA972BA372B /* SharedServices/V2BoardAPIClient.swift */; };
+		5BB3AF704D9080E24B11D025 /* SharedDomain/RegistrationConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78E1B385610CF7D3ECD0C33 /* SharedDomain/RegistrationConfig.swift */; };
+		5D7D576AA22F25170BFAC87A /* SharedDomain/UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C5505BF31D2A59F44958D7 /* SharedDomain/UserSession.swift */; };
+		5DA40DD10E360EB1BD06B52C /* Resources/Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 66D3C22D9D360D909FA84430 /* Resources/Localizable.xcstrings */; };
+		698DEE836A831F65EAC0DDFB /* SharedServices/NodeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132602F4480EB32E0451B8A8 /* SharedServices/NodeRepository.swift */; };
+		6E37C6908C775CC43FA183B7 /* SharedServices/BuiltInProxyParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878A2CBA52D2607E2C748DF4 /* SharedServices/BuiltInProxyParser.swift */; };
+		7FFB22F2FA923C2CC47F1047 /* iOSAdapters/UnavailableRecoveryRuntime.swift in Sources */ = {isa = PBXBuildFile; fileRef = C052C2DFF9A4D7CA4DAD81D9 /* iOSAdapters/UnavailableRecoveryRuntime.swift */; };
+		8843DB5659E9022FD545FA43 /* Yams in Frameworks */ = {isa = PBXBuildFile; productRef = 1CE20F2F49D079F7DA16C6FA /* Yams */; };
+		8856AC472BFECF595DB9DF6C /* SharedDomain/RemoteConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9C8DEF966BE2474D6D8E28 /* SharedDomain/RemoteConfig.swift */; };
+		88BD435CCFEEA00047B1CD76 /* SharedDomain/YAMLValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A88A9533E9159F96AE39034 /* SharedDomain/YAMLValue.swift */; };
+		8D4A066C78FD1992702F274C /* App/Views/CommerceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91752FD2C3337AF27D54B5D6 /* App/Views/CommerceView.swift */; };
+		8E713FEA8E6686AE45E4DBF8 /* SharedDomain/NodeIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417B023C7D0B57AF2CB011EF /* SharedDomain/NodeIdentity.swift */; };
+		938504ABB191853F08F7271B /* iOSAdapters/AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC0B29A66E43CE74F8BD493 /* iOSAdapters/AppSettings.swift */; };
+		93BB01A600251965E359F78D /* App/NetworkClientApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F748340418F722125BB9726 /* App/NetworkClientApp.swift */; };
+		9C10BB88A3B7BF19B54FBBEB /* SharedServices/RemoteConfigService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B39539FE2A9AC1EF5B6D1FA /* SharedServices/RemoteConfigService.swift */; };
+		9E022B0C5C14649B170F51FF /* App/Views/SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03288C46357B1C0ABFC1A525 /* App/Views/SettingsView.swift */; };
+		A36B9A2C08C33A045DDCE4FA /* TunnelContract/VPNContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AD22EB9D65D2B29CE40C66 /* TunnelContract/VPNContract.swift */; };
+		A38BB33B730C7D5E60D7FA0F /* App/Views/HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E659160EACB56EDECDFB98 /* App/Views/HomeView.swift */; };
+		AB322162054B369D3710B53B /* SharedServices/TrafficFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFAF51ED1EF840F9A0CF2C2 /* SharedServices/TrafficFormatter.swift */; };
+		ABB38393A5D8D117E5465DBC /* SharedDomain/ProfileModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBC383F73AFB25C603F7E46 /* SharedDomain/ProfileModels.swift */; };
+		B641FC8CD998D0928A068118 /* SharedDomain/LocalizedMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E2122FF762E9AB556DC05D /* SharedDomain/LocalizedMessage.swift */; };
+		BD87A40FE439AD80455DFDBC /* SharedServices/AuthValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E5752F5D4DB69FABA25E7C /* SharedServices/AuthValidation.swift */; };
+		BDA1D900FF7B281A4DB17EE7 /* iOSAdapters/UserSystemLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72777E522A7DABDE5C838E2A /* iOSAdapters/UserSystemLogger.swift */; };
+		C0EA5FE23FF066E1F1E0412F /* SharedDomain/CountryFlagResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A70E311AAB5675817BFC8C0 /* SharedDomain/CountryFlagResolver.swift */; };
+		D91C40A9CF3317B156F12349 /* iOSAdapters/NodeSelectionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7826671E6EED9AFBFF8FB667 /* iOSAdapters/NodeSelectionStore.swift */; };
+		E23AA10463B1E1BF56BC8505 /* SharedServices/SubscriptionFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBCC40F0692C2B131C60322 /* SharedServices/SubscriptionFetcher.swift */; };
+		E3A2574282334C6BA2C5C74C /* Resources/NetworkEndpoints.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D7568F73DA8FFBBD93D5073 /* Resources/NetworkEndpoints.json */; };
+		E471448C4FE71C9E9A10C40C /* SharedServices/APIRecoveryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426466C4FCFCD7D150846CBF /* SharedServices/APIRecoveryRouter.swift */; };
+		E5ACF0E9341661F5934D94E6 /* SharedServices/Contracts/NodeSelectionStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1CDEC00A65205A6CA59C15 /* SharedServices/Contracts/NodeSelectionStoreProtocol.swift */; };
+		F0A1B2C3D4E5F60718293A4C /* SharedServices/NetworkTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1B2C3D4E5F60718293A4B /* SharedServices/NetworkTransport.swift */; };
+		F0A1B2C3D4E5F60718293A5C /* SharedServices/APIHealthMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1B2C3D4E5F60718293A5B /* SharedServices/APIHealthMonitor.swift */; };
+		F0A1B2C3D4E5F60718293A6C /* Tests/APIHealthMonitorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1B2C3D4E5F60718293A6B /* Tests/APIHealthMonitorTests.swift */; };
+		FDC78A8628D5421A527F3E81 /* SharedDomain/BuiltInProxyEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22031A740FCBF490002B6727 /* SharedDomain/BuiltInProxyEndpoint.swift */; };
+		3531D5741CEAB1C5669B8426 /* SelectedNodeTunnelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BFE8403254DA380C0FDC37 /* SelectedNodeTunnelMapper.swift */; };
+		A56F9C6A92184C8DAB110007 /* MihomoStableCandidatePoolBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56F9C6A92184C8DAB110009 /* MihomoStableCandidatePoolBuilder.swift */; };
+		A56F9C6A92184C8DAB110008 /* MihomoStableCandidatePoolBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56F9C6A92184C8DAB110009 /* MihomoStableCandidatePoolBuilder.swift */; };
+		27B7C5303E67AA76EEF38473 /* MihomoTunnelConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085DE38919ECC7CE0829F43C /* MihomoTunnelConfiguration.swift */; };
+		238A29A0EBD86C32EF8BA494 /* NETunnelProviderAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD33FC85769E39C84729C01 /* NETunnelProviderAccess.swift */; };
+		7DF55A44AAA846C1556713F7 /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAA8935CF8579D7DE1D2A57 /* PacketTunnelProvider.swift */; };
+		02DAEA9B7F3C923415558861 /* TunnelPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = F560CF3188CF34C494CC8E5F /* TunnelPlatform.swift */; };
+		61A80D8ED0FD7C4A5D627391 /* PacketFlowBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF1033993E231854F49ED7D /* PacketFlowBridge.swift */; };
+		3B3ED166A7CEBD8CB6E28519 /* MihomoTunnelConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085DE38919ECC7CE0829F43C /* MihomoTunnelConfiguration.swift */; };
+		D754543692C809C00611C250 /* Resources/BrandFixtures/Profiles.json in Resources */ = {isa = PBXBuildFile; fileRef = F3762E20002834A9934DCEA2 /* Resources/BrandFixtures/Profiles.json */; };
+		164711F85ACC2238E39DCC10 /* Resources/NetworkEndpoints.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D7568F73DA8FFBBD93D5073 /* Resources/NetworkEndpoints.json */; };
+		10A7E6B8249FBD3E84B912D2 /* Resources/UIFixture.json in Resources */ = {isa = PBXBuildFile; fileRef = D1168C8254A2395171972144 /* Resources/UIFixture.json */; };
+		1B7FF2984DC735C6B4AC2071 /* Resources/BrandTheme.json in Resources */ = {isa = PBXBuildFile; fileRef = 766F1C52E00478D753230C84 /* Resources/BrandTheme.json */; };
+		DA9FF54911A9AAAA84026C92 /* Resources/BrandFixtures/ThemeB.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C7A5417DE615256056ECFA7 /* Resources/BrandFixtures/ThemeB.json */; };
+		4ACF6D4B154C40F4139E6CBC /* Resources/BrandFixtures/BrandB.json in Resources */ = {isa = PBXBuildFile; fileRef = BF6A5C508AAA2669B293CE2F /* Resources/BrandFixtures/BrandB.json */; };
+		DDA33D89E729FABBEF22F2CD /* Resources/BrandFixtures/BrandA.json in Resources */ = {isa = PBXBuildFile; fileRef = 798C56C5933FFD1D67899252 /* Resources/BrandFixtures/BrandA.json */; };
+		811A24B3DDECC0C15E6FAD96 /* Resources/BrandFixtures/LogoA.png in Resources */ = {isa = PBXBuildFile; fileRef = 00313AC00E34DEF13922B053 /* Resources/BrandFixtures/LogoA.png */; };
+		C676EB79EEF6F3E4094A769A /* Resources/BrandFixtures/ThemeA.json in Resources */ = {isa = PBXBuildFile; fileRef = 84E3BBC55F11390E63A4FBA8 /* Resources/BrandFixtures/ThemeA.json */; };
+		38FA36A7D6779722C21BB93E /* Resources/BrandFixtures/LogoB.png in Resources */ = {isa = PBXBuildFile; fileRef = 48EA681CDA8AACDF49592930 /* Resources/BrandFixtures/LogoB.png */; };
+		0775FB4934149FC95B63F514 /* Resources/Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 66D3C22D9D360D909FA84430 /* Resources/Localizable.xcstrings */; };
+		6A709C2619DDBFB1D9E812B0 /* Resources/Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFEF8106816C9945F23BAA2E /* Resources/Assets.xcassets */; };
+		793785A56D850E8A286E7CA4 /* Yams in Frameworks */ = {isa = PBXBuildFile; productRef = 1CE20F2F49D079F7DA16C6FA /* Yams */; };
+		14930EB25138650642AF4E51 /* NetworkPacketTunnel.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 35D4ECAA7FBE25DF727661A4 /* NetworkPacketTunnel.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EA33DE71BECF90BE4160C3AC /* MihomoBridgeConcurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1E2D3C4B5A697887760001; };
+		82447452E547F7A0691CAF78 /* MihomoCoreBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1E2D3C4B5A697887760002; };
+		D6A44F73A1C260FB5094B745 /* AppOnlyRecoveryRuntime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1E2D3C4B5A697887760003; };
+		2117DC3DF4E51072C85E4B73 /* RecoveryNodeMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1E2D3C4B5A697887760004; };
+		FD3A6AFBC22ECE5B3E1D522A /* BuiltInProxyBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1E2D3C4B5A697887760005; };
+		DD801AE29E10A26FB20301CB /* MihomoAppPlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F1E2D3C4B5A697887760006; };
+		F6FECF8FC547CF30CCE6C97A /* App/BrandUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B924D2B06E59457C92C1167 /* App/BrandUI.swift */; };
+		179534BD5FE841F9F8222BD8 /* iOSAdapters/BrandProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4A12359C28070C9E7F4215 /* iOSAdapters/BrandProvider.swift */; };
+		F926A4C34968C785B48AA410 /* App/NetworkClientApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F748340418F722125BB9726 /* App/NetworkClientApp.swift */; };
+		B968E37A67D54992AA030080 /* App/AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A4B5587D070B8F12ADB381 /* App/AppModel.swift */; };
+		2D619F629671E408E4471EDF /* App/Views/SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03288C46357B1C0ABFC1A525 /* App/Views/SettingsView.swift */; };
+		58DF5DEAE536EA5DEF8EF5DE /* App/Views/ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AC22C5DC8F8F4F9311B920 /* App/Views/ProfileView.swift */; };
+		C195DD1EA8A9B138051D8EBF /* App/Views/HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E659160EACB56EDECDFB98 /* App/Views/HomeView.swift */; };
+		80470DF3AEB1548DD74028A6 /* App/Views/RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148CDC0B8DB96F05181BDE2A /* App/Views/RootView.swift */; };
+		BAC8BE50D5D9D633A8F0EB32 /* App/Views/AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20242C47392A28B48E0D52D0 /* App/Views/AuthView.swift */; };
+		B20F3E7DB4A6E6790BFE521B /* App/Views/CommerceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91752FD2C3337AF27D54B5D6 /* App/Views/CommerceView.swift */; };
+		BCC93411179B24C027564B8B /* App/Views/NodesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC20B9C19C4FAE04EC0B627 /* App/Views/NodesView.swift */; };
+		B1E3E2D660F52678295108D9 /* SharedDomain/UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C5505BF31D2A59F44958D7 /* SharedDomain/UserSession.swift */; };
+		F7B124D21F9E6886F5A52E7E /* SharedDomain/ProfileModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBC383F73AFB25C603F7E46 /* SharedDomain/ProfileModels.swift */; };
+		1DF77F2D907C0ECC70518FC7 /* SharedDomain/ParsedSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFFF8D242E3ED596C047CA6 /* SharedDomain/ParsedSubscription.swift */; };
+		D5E3DCFAAEDDDC7ADDCF58FD /* SharedDomain/YAMLValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A88A9533E9159F96AE39034 /* SharedDomain/YAMLValue.swift */; };
+		798D1CA6FE088B14FF268358 /* SharedDomain/BuiltInProxyEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22031A740FCBF490002B6727 /* SharedDomain/BuiltInProxyEndpoint.swift */; };
+		55C670D10EAC71B2C79D835C /* SharedDomain/ProxyNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A93CB3D6C48EB2803C6A23 /* SharedDomain/ProxyNode.swift */; };
+		684DF36076D467A414C7A51D /* SharedDomain/PurchaseCommerceModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9357DF4B87BBB7FEEB8932 /* SharedDomain/PurchaseCommerceModels.swift */; };
+		29EE497E657EC2D38817F5C2 /* SharedDomain/NodeIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417B023C7D0B57AF2CB011EF /* SharedDomain/NodeIdentity.swift */; };
+		7A04EEF9DC1B4511E305CAF7 /* SharedDomain/HomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87819F9DC75FB5086F6B8524 /* SharedDomain/HomeModels.swift */; };
+		82A5818BA33064E581DEA566 /* SharedDomain/CountryFlagResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A70E311AAB5675817BFC8C0 /* SharedDomain/CountryFlagResolver.swift */; };
+		49D6D275AC3A8A1BB6877A94 /* SharedDomain/RemoteConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9C8DEF966BE2474D6D8E28 /* SharedDomain/RemoteConfig.swift */; };
+		9E1CCA89AF23DD2001FCCA18 /* SharedDomain/ProxyMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF4F376D55A2DF23CC368A5 /* SharedDomain/ProxyMode.swift */; };
+		93E1A66DA5E1F52EA81E34F3 /* SharedDomain/LocalizedMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E2122FF762E9AB556DC05D /* SharedDomain/LocalizedMessage.swift */; };
+		9697DC29E772C50AAD1B7AB0 /* SharedDomain/RegistrationConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78E1B385610CF7D3ECD0C33 /* SharedDomain/RegistrationConfig.swift */; };
+		46233B8A29E013680E7713C6 /* SharedDomain/UserLogEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAE66C5E8D436419D1128A2 /* SharedDomain/UserLogEntry.swift */; };
+		D7CA8A68E1EE797AA4C98AF5 /* SharedServices/NodeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132602F4480EB32E0451B8A8 /* SharedServices/NodeRepository.swift */; };
+		AB02DED0BF17C33689847312 /* SharedServices/APIRecoveryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426466C4FCFCD7D150846CBF /* SharedServices/APIRecoveryRouter.swift */; };
+		CDC6CC614E588A58F303856D /* SharedServices/NetworkTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1B2C3D4E5F60718293A4B /* SharedServices/NetworkTransport.swift */; };
+		23EEB22CA6E9EF7FCA0D7668 /* SharedServices/APIHealthMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A1B2C3D4E5F60718293A5B /* SharedServices/APIHealthMonitor.swift */; };
+		1F84D64FDC403A7C05DFFAAF /* SharedServices/AuthValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E5752F5D4DB69FABA25E7C /* SharedServices/AuthValidation.swift */; };
+		F24E32F116A64152CA1B0881 /* SharedServices/V2BoardAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99BEE8B42196BA972BA372B /* SharedServices/V2BoardAPIClient.swift */; };
+		5F0B069A94BDD977BB75EAA2 /* SharedServices/BuiltInProxyParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878A2CBA52D2607E2C748DF4 /* SharedServices/BuiltInProxyParser.swift */; };
+		49C73E03582FE9ED336C52EC /* SharedServices/SubscriptionParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAABCBF60F5532C0306C8FD2 /* SharedServices/SubscriptionParser.swift */; };
+		757F85E6F8FB98B4CE66D160 /* SharedServices/SupportLinkResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C7748EB857B07098ECC9E1 /* SharedServices/SupportLinkResolver.swift */; };
+		940F790D6DF686ADFA49CF83 /* SharedServices/TrafficFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFAF51ED1EF840F9A0CF2C2 /* SharedServices/TrafficFormatter.swift */; };
+		7B20D23C2FD5C6394115ABA5 /* SharedServices/RemoteConfigService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B39539FE2A9AC1EF5B6D1FA /* SharedServices/RemoteConfigService.swift */; };
+		EC30FC92C4E6FA2123194384 /* SharedServices/V2BoardAPIErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0521E0816B2E2FA79C2D1D97 /* SharedServices/V2BoardAPIErrorParser.swift */; };
+		6C568176A10474966020A11C /* SharedServices/PendingPaymentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36021A082A0AE5923CE6358 /* SharedServices/PendingPaymentStore.swift */; };
+		1B93360C16DF88F208DCDFF9 /* SharedServices/SubscriptionFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBCC40F0692C2B131C60322 /* SharedServices/SubscriptionFetcher.swift */; };
+		71F6D5C5638811F4BE7994D1 /* SharedServices/Contracts/NodeRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A92E496627EFBD73265E47 /* SharedServices/Contracts/NodeRepositoryProtocol.swift */; };
+		082C3640ABBE47ACB02C171A /* SharedServices/Contracts/NodeSelectionStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1CDEC00A65205A6CA59C15 /* SharedServices/Contracts/NodeSelectionStoreProtocol.swift */; };
+		BE539F1A4707826DC7D32644 /* iOSAdapters/UserSystemLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72777E522A7DABDE5C838E2A /* iOSAdapters/UserSystemLogger.swift */; };
+		F2B132F12A689BF09D8FD22E /* iOSAdapters/SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7378B3378F56C00293D705D /* iOSAdapters/SessionStore.swift */; };
+		4172C4B799043F18AF392EF2 /* iOSAdapters/AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC0B29A66E43CE74F8BD493 /* iOSAdapters/AppSettings.swift */; };
+		0120C9466C40BCD8BF398B58 /* iOSAdapters/SafeLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77426F00801ABFE5D7F29FFE /* iOSAdapters/SafeLog.swift */; };
+		8D7D0F97D4507879053FEA2D /* iOSAdapters/UnavailableRecoveryRuntime.swift in Sources */ = {isa = PBXBuildFile; fileRef = C052C2DFF9A4D7CA4DAD81D9 /* iOSAdapters/UnavailableRecoveryRuntime.swift */; };
+		E6598AA3036FC2F2621C771C /* iOSAdapters/NodeSelectionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7826671E6EED9AFBFF8FB667 /* iOSAdapters/NodeSelectionStore.swift */; };
+		48E13230E7DAC448182A891A /* TunnelContract/VPNContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AD22EB9D65D2B29CE40C66 /* TunnelContract/VPNContract.swift */; };
+		BC422338E826634F5326703E /* SelectedNodeTunnelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BFE8403254DA380C0FDC37 /* SelectedNodeTunnelMapper.swift */; };
+		712FEAD857B36F69B60FB021 /* MihomoTunnelConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085DE38919ECC7CE0829F43C /* MihomoTunnelConfiguration.swift */; };
+		D20000000000000000000001 /* DeveloperDiagnosticEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10000000000000000000001 /* SharedDomain/DeveloperDiagnosticEvent.swift */; };
+		D20000000000000000000002 /* DeveloperDiagnostics.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10000000000000000000002 /* iOSAdapters/DeveloperDiagnostics.swift */; };
+		D20000000000000000000004 /* DeveloperDiagnosticEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10000000000000000000001 /* SharedDomain/DeveloperDiagnosticEvent.swift */; };
+		D20000000000000000000005 /* DeveloperDiagnostics.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10000000000000000000002 /* iOSAdapters/DeveloperDiagnostics.swift */; };
+		D30000000000000000000001 /* DeveloperDiagnosticsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40000000000000000000001 /* Tests/DeveloperDiagnosticsTests.swift */; };
+		06B245BF6A4E2E0ACD026FDB /* VPNObsoleteDataRemoval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2972F3637B431A216C071AC4 /* VPNObsoleteDataRemoval.swift */; };
+		69F8C2AFBBF6FAA43F380D70 /* VPNObsoleteDataRemoval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2972F3637B431A216C071AC4 /* VPNObsoleteDataRemoval.swift */; };
+		4AF8B72276E5D334C923C23D /* VPNObsoleteDataRemovalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9796FD63D5599B06534C85FA /* VPNObsoleteDataRemovalTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3B07A601889A5C98A1E12C74 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 98F54143AB4E86B28C3AFEE0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F6027D858B72CC70E5CC8E9;
+			remoteInfo = NetworkClient;
+		};
+		DC81A1167233FC404FD46B40 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 98F54143AB4E86B28C3AFEE0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F6027D858B72CC70E5CC8E9;
+			remoteInfo = NetworkClient;
+		};
+		25FA5CCFAAA54861C347FCEF /* PBXContainerItemProxy */ = {isa = PBXContainerItemProxy; containerPortal = 98F54143AB4E86B28C3AFEE0 /* Project object */; proxyType = 1; remoteGlobalIDString = 65FFF21843C6A9F07D8CF1DF; remoteInfo = NetworkPacketTunnel; };
+		F1A500000000000000000005 /* PBXContainerItemProxy */ = {isa = PBXContainerItemProxy; containerPortal = 98F54143AB4E86B28C3AFEE0 /* Project object */; proxyType = 1; remoteGlobalIDString = 65FFF21843C6A9F07D8CF1DF; remoteInfo = NetworkPacketTunnel; };
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F1A500000000000000000003 /* Embed App Extensions */ = {isa = PBXCopyFilesBuildPhase; buildActionMask = 2147483647; dstPath = ""; dstSubfolderSpec = 13; files = (F1A500000000000000000002 /* NetworkPacketTunnel.appex in Embed App Extensions */); name = "Embed App Extensions"; runOnlyForDeploymentPostprocessing = 0; };
+		DB825654ACECA0A82608AC0A /* Embed App Extensions */ = {isa = PBXCopyFilesBuildPhase; buildActionMask = 2147483647; dstPath = ""; dstSubfolderSpec = 13; files = (14930EB25138650642AF4E51 /* NetworkPacketTunnel.appex in Embed App Extensions */); name = "Embed App Extensions"; runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A0C100000000000000000003 /* Resources/PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Resources/PrivacyInfo.xcprivacy; sourceTree = SOURCE_ROOT; };
+		A0C100000000000000000005 /* NetworkPacketTunnel/PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = NetworkPacketTunnel/PrivacyInfo.xcprivacy; sourceTree = SOURCE_ROOT; };
+		A0B400000000000000000003 /* GeneratedBrandAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = GeneratedBrandAssets.xcassets; sourceTree = DERIVED_FILE_DIR; };
+		E10000000000000000000101 /* SharedDomain/AppUpdateModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedDomain/AppUpdateModels.swift; sourceTree = SOURCE_ROOT; };
+		E10000000000000000000102 /* SharedServices/AppUpdateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedServices/AppUpdateService.swift; sourceTree = SOURCE_ROOT; };
+		F1B600000000000000000004 /* App/GlobalModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/GlobalModal.swift; sourceTree = SOURCE_ROOT; };
+		F1B600000000000000000005 /* Tests/GlobalModalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/GlobalModalTests.swift; sourceTree = SOURCE_ROOT; };
+		A5B100000000000000000004 /* IPv4CaptureRouteBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkPacketTunnel/IPv4CaptureRouteBuilder.swift; sourceTree = SOURCE_ROOT; };
+		A5B100000000000000000005 /* IPv4CaptureRouteBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/IPv4CaptureRouteBuilderTests.swift; sourceTree = SOURCE_ROOT; };
+		F3C100000000000000000002 /* MihomoTunnelStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/MihomoTunnelStoreTests.swift; sourceTree = SOURCE_ROOT; };
+		A21000000000000000000101 /* GeoDataManifest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunnelContract/VPNTest/GeoDataManifest.swift; sourceTree = SOURCE_ROOT; };
+		A21000000000000000000102 /* GeoDataReadiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkPacketTunnel/GeoDataReadiness.swift; sourceTree = SOURCE_ROOT; };
+		A21000000000000000000103 /* GeoDataPreparer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSAdapters/Mihomo/GeoDataPreparer.swift; sourceTree = SOURCE_ROOT; };
+		F489951D7EB021646CDB5290 /* ProviderRuntime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkPacketTunnel/ProviderRuntime.swift; sourceTree = SOURCE_ROOT; };
+		A4F100000000000000000003 /* NetworkInterfaceInventory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkPacketTunnel/NetworkInterfaceInventory.swift; sourceTree = SOURCE_ROOT; };
+		F3F100000000000000000005 /* ProviderRuntimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/ProviderRuntimeTests.swift; sourceTree = SOURCE_ROOT; };
+		A21000000000000000000105 /* GeoDataArchitectureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/GeoDataArchitectureTests.swift; sourceTree = SOURCE_ROOT; };
+		A21000000000000000000104 /* PROVENANCE.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = NetworkPacketTunnel/GeoData/PROVENANCE.json; sourceTree = SOURCE_ROOT; };
+		0F1E2D3C4B5A697887760001 /* MihomoBridgeConcurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSAdapters/Mihomo/MihomoBridgeConcurrency.swift; sourceTree = SOURCE_ROOT; };
+		0F1E2D3C4B5A697887760002 /* MihomoCoreBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSAdapters/Mihomo/MihomoCoreBridge.swift; sourceTree = SOURCE_ROOT; };
+		0F1E2D3C4B5A697887760003 /* AppOnlyRecoveryRuntime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSAdapters/Mihomo/AppOnlyRecoveryRuntime.swift; sourceTree = SOURCE_ROOT; };
+		0F1E2D3C4B5A697887760004 /* RecoveryNodeMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSAdapters/Mihomo/RecoveryNodeMapper.swift; sourceTree = SOURCE_ROOT; };
+		0F1E2D3C4B5A697887760005 /* BuiltInProxyBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSAdapters/Mihomo/BuiltInProxyBridge.swift; sourceTree = SOURCE_ROOT; };
+		0F1E2D3C4B5A697887760006 /* MihomoAppPlatform.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSAdapters/Mihomo/MihomoAppPlatform.m; sourceTree = SOURCE_ROOT; };
+		0F1E2D3C4B5A697887760007 /* MihomoAppPlatform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOSAdapters/Mihomo/MihomoAppPlatform.h; sourceTree = SOURCE_ROOT; };
+		0F1E2D3C4B5A697887760008 /* Mihomo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOSAdapters/Mihomo/Mihomo-Bridging-Header.h; sourceTree = SOURCE_ROOT; };
+		0F1E2D3C4B5A69788776000A /* MihomoRecoveryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/MihomoRecoveryTests.swift; sourceTree = SOURCE_ROOT; };
+		00313AC00E34DEF13922B053 /* Resources/BrandFixtures/LogoA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Resources/BrandFixtures/LogoA.png; sourceTree = SOURCE_ROOT; };
+		01479558C5A10083CF5B02AD /* Resources/bootstrap.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Resources/bootstrap.json; sourceTree = SOURCE_ROOT; };
+		03288C46357B1C0ABFC1A525 /* App/Views/SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/Views/SettingsView.swift; sourceTree = SOURCE_ROOT; };
+		0521E0816B2E2FA79C2D1D97 /* SharedServices/V2BoardAPIErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedServices/V2BoardAPIErrorParser.swift; sourceTree = SOURCE_ROOT; };
+		07AC22C5DC8F8F4F9311B920 /* App/Views/ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/Views/ProfileView.swift; sourceTree = SOURCE_ROOT; };
+		0A88A9533E9159F96AE39034 /* SharedDomain/YAMLValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedDomain/YAMLValue.swift; sourceTree = SOURCE_ROOT; };
+		0B39539FE2A9AC1EF5B6D1FA /* SharedServices/RemoteConfigService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedServices/RemoteConfigService.swift; sourceTree = SOURCE_ROOT; };
+		132602F4480EB32E0451B8A8 /* SharedServices/NodeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedServices/NodeRepository.swift; sourceTree = SOURCE_ROOT; };
+		148CDC0B8DB96F05181BDE2A /* App/Views/RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/Views/RootView.swift; sourceTree = SOURCE_ROOT; };
+		17E659160EACB56EDECDFB98 /* App/Views/HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/Views/HomeView.swift; sourceTree = SOURCE_ROOT; };
+		1CF4F376D55A2DF23CC368A5 /* SharedDomain/ProxyMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedDomain/ProxyMode.swift; sourceTree = SOURCE_ROOT; };
+		1D9C8DEF966BE2474D6D8E28 /* SharedDomain/RemoteConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedDomain/RemoteConfig.swift; sourceTree = SOURCE_ROOT; };
+		1DBCC40F0692C2B131C60322 /* SharedServices/SubscriptionFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedServices/SubscriptionFetcher.swift; sourceTree = SOURCE_ROOT; };
+		20242C47392A28B48E0D52D0 /* App/Views/AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/Views/AuthView.swift; sourceTree = SOURCE_ROOT; };
+		22031A740FCBF490002B6727 /* SharedDomain/BuiltInProxyEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedDomain/BuiltInProxyEndpoint.swift; sourceTree = SOURCE_ROOT; };
+		2A70E311AAB5675817BFC8C0 /* SharedDomain/CountryFlagResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedDomain/CountryFlagResolver.swift; sourceTree = SOURCE_ROOT; };
+		2B1CDEC00A65205A6CA59C15 /* SharedServices/Contracts/NodeSelectionStoreProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedServices/Contracts/NodeSelectionStoreProtocol.swift; sourceTree = SOURCE_ROOT; };
+		2B924D2B06E59457C92C1167 /* App/BrandUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/BrandUI.swift; sourceTree = SOURCE_ROOT; };
+		3ADE90BCB0F80D63AB2EEB78 /* Tests/SubscriptionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/SubscriptionTests.swift; sourceTree = SOURCE_ROOT; };
+		3DC0B29A66E43CE74F8BD493 /* iOSAdapters/AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSAdapters/AppSettings.swift; sourceTree = SOURCE_ROOT; };
+		3F748340418F722125BB9726 /* App/NetworkClientApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/NetworkClientApp.swift; sourceTree = SOURCE_ROOT; };
+		417B023C7D0B57AF2CB011EF /* SharedDomain/NodeIdentity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedDomain/NodeIdentity.swift; sourceTree = SOURCE_ROOT; };
+		426466C4FCFCD7D150846CBF /* SharedServices/APIRecoveryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedServices/APIRecoveryRouter.swift; sourceTree = SOURCE_ROOT; };
+		48EA681CDA8AACDF49592930 /* Resources/BrandFixtures/LogoB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Resources/BrandFixtures/LogoB.png; sourceTree = SOURCE_ROOT; };
+		4D7568F73DA8FFBBD93D5073 /* Resources/NetworkEndpoints.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Resources/NetworkEndpoints.json; sourceTree = SOURCE_ROOT; };
+		66D3C22D9D360D909FA84430 /* Resources/Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Resources/Localizable.xcstrings; sourceTree = SOURCE_ROOT; };
+		6BFFF8D242E3ED596C047CA6 /* SharedDomain/ParsedSubscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedDomain/ParsedSubscription.swift; sourceTree = SOURCE_ROOT; };
+		6CFAF51ED1EF840F9A0CF2C2 /* SharedServices/TrafficFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedServices/TrafficFormatter.swift; sourceTree = SOURCE_ROOT; };
+		6FBC383F73AFB25C603F7E46 /* SharedDomain/ProfileModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedDomain/ProfileModels.swift; sourceTree = SOURCE_ROOT; };
+		72777E522A7DABDE5C838E2A /* iOSAdapters/UserSystemLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSAdapters/UserSystemLogger.swift; sourceTree = SOURCE_ROOT; };
+		766F1C52E00478D753230C84 /* Resources/BrandTheme.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Resources/BrandTheme.json; sourceTree = SOURCE_ROOT; };
+		77426F00801ABFE5D7F29FFE /* iOSAdapters/SafeLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSAdapters/SafeLog.swift; sourceTree = SOURCE_ROOT; };
+		7826671E6EED9AFBFF8FB667 /* iOSAdapters/NodeSelectionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSAdapters/NodeSelectionStore.swift; sourceTree = SOURCE_ROOT; };
+		798C56C5933FFD1D67899252 /* Resources/BrandFixtures/BrandA.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Resources/BrandFixtures/BrandA.json; sourceTree = SOURCE_ROOT; };
+		84E3BBC55F11390E63A4FBA8 /* Resources/BrandFixtures/ThemeA.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Resources/BrandFixtures/ThemeA.json; sourceTree = SOURCE_ROOT; };
+		86C7748EB857B07098ECC9E1 /* SharedServices/SupportLinkResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedServices/SupportLinkResolver.swift; sourceTree = SOURCE_ROOT; };
+		87819F9DC75FB5086F6B8524 /* SharedDomain/HomeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedDomain/HomeModels.swift; sourceTree = SOURCE_ROOT; };
+		878A2CBA52D2607E2C748DF4 /* SharedServices/BuiltInProxyParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedServices/BuiltInProxyParser.swift; sourceTree = SOURCE_ROOT; };
+		88A4B5587D070B8F12ADB381 /* App/AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/AppModel.swift; sourceTree = SOURCE_ROOT; };
+		A56F9C6A92184C8DAB110003 /* App/NodeSessionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/NodeSessionCoordinator.swift; sourceTree = SOURCE_ROOT; };
+		A56F9C6A92184C8DAB110006 /* App/NodeLatencyCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/NodeLatencyCoordinator.swift; sourceTree = SOURCE_ROOT; };
+		F3A100000000000000000003 /* App/MinimalVPNController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/MinimalVPNController.swift; sourceTree = SOURCE_ROOT; };
+		F3A100000000000000000005 /* Tests/MinimalVPNControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/MinimalVPNControllerTests.swift; sourceTree = SOURCE_ROOT; };
+		8BAE66C5E8D436419D1128A2 /* SharedDomain/UserLogEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedDomain/UserLogEntry.swift; sourceTree = SOURCE_ROOT; };
+		8C9357DF4B87BBB7FEEB8932 /* SharedDomain/PurchaseCommerceModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedDomain/PurchaseCommerceModels.swift; sourceTree = SOURCE_ROOT; };
+		A0B100000000000000000001 /* Configuration/Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Configuration/Base.xcconfig; sourceTree = SOURCE_ROOT; };
+		A0B100000000000000000002 /* Configuration/Public.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Configuration/Public.xcconfig; sourceTree = SOURCE_ROOT; };
+		90C5505BF31D2A59F44958D7 /* SharedDomain/UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedDomain/UserSession.swift; sourceTree = SOURCE_ROOT; };
+		91752FD2C3337AF27D54B5D6 /* App/Views/CommerceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/Views/CommerceView.swift; sourceTree = SOURCE_ROOT; };
+		94A92E496627EFBD73265E47 /* SharedServices/Contracts/NodeRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedServices/Contracts/NodeRepositoryProtocol.swift; sourceTree = SOURCE_ROOT; };
+		9C7A5417DE615256056ECFA7 /* Resources/BrandFixtures/ThemeB.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Resources/BrandFixtures/ThemeB.json; sourceTree = SOURCE_ROOT; };
+		A0E5752F5D4DB69FABA25E7C /* SharedServices/AuthValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedServices/AuthValidation.swift; sourceTree = SOURCE_ROOT; };
+		A3AD22EB9D65D2B29CE40C66 /* TunnelContract/VPNContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunnelContract/VPNContract.swift; sourceTree = SOURCE_ROOT; };
+		AA104DE931E27BF277F0B54D /* Tests/BusinessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/BusinessTests.swift; sourceTree = SOURCE_ROOT; };
+		B36021A082A0AE5923CE6358 /* SharedServices/PendingPaymentStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedServices/PendingPaymentStore.swift; sourceTree = SOURCE_ROOT; };
+		B58968AD397FA1A20599C9F3 /* NetworkClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = NetworkClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7480EC88B7F22D0A4757273 /* NetworkClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = NetworkClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD160601D79711BB1D1AD353 /* Tests/BrandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/BrandTests.swift; sourceTree = SOURCE_ROOT; };
+		BF6A5C508AAA2669B293CE2F /* Resources/BrandFixtures/BrandB.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Resources/BrandFixtures/BrandB.json; sourceTree = SOURCE_ROOT; };
+		C052C2DFF9A4D7CA4DAD81D9 /* iOSAdapters/UnavailableRecoveryRuntime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSAdapters/UnavailableRecoveryRuntime.swift; sourceTree = SOURCE_ROOT; };
+		C78E1B385610CF7D3ECD0C33 /* SharedDomain/RegistrationConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedDomain/RegistrationConfig.swift; sourceTree = SOURCE_ROOT; };
+		CAABCBF60F5532C0306C8FD2 /* SharedServices/SubscriptionParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedServices/SubscriptionParser.swift; sourceTree = SOURCE_ROOT; };
+		CF74AC17C4D2FB331F6FA9EB /* UITests/LaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITests/LaunchTests.swift; sourceTree = SOURCE_ROOT; };
+		CFEF8106816C9945F23BAA2E /* Resources/Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Resources/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		D1168C8254A2395171972144 /* Resources/UIFixture.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Resources/UIFixture.json; sourceTree = SOURCE_ROOT; };
+		DD4A12359C28070C9E7F4215 /* iOSAdapters/BrandProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSAdapters/BrandProvider.swift; sourceTree = SOURCE_ROOT; };
+		E2A93CB3D6C48EB2803C6A23 /* SharedDomain/ProxyNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedDomain/ProxyNode.swift; sourceTree = SOURCE_ROOT; };
+		E6FC57C251E9E1BEC1D3C0D2 /* NetworkClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = NetworkClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0A1B2C3D4E5F60718293A4B /* SharedServices/NetworkTransport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedServices/NetworkTransport.swift; sourceTree = SOURCE_ROOT; };
+		F0A1B2C3D4E5F60718293A5B /* SharedServices/APIHealthMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedServices/APIHealthMonitor.swift; sourceTree = SOURCE_ROOT; };
+		F0A1B2C3D4E5F60718293A6B /* Tests/APIHealthMonitorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/APIHealthMonitorTests.swift; sourceTree = SOURCE_ROOT; };
+		F3762E20002834A9934DCEA2 /* Resources/BrandFixtures/Profiles.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Resources/BrandFixtures/Profiles.json; sourceTree = SOURCE_ROOT; };
+		F7378B3378F56C00293D705D /* iOSAdapters/SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSAdapters/SessionStore.swift; sourceTree = SOURCE_ROOT; };
+		F7E2122FF762E9AB556DC05D /* SharedDomain/LocalizedMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedDomain/LocalizedMessage.swift; sourceTree = SOURCE_ROOT; };
+		F99BEE8B42196BA972BA372B /* SharedServices/V2BoardAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedServices/V2BoardAPIClient.swift; sourceTree = SOURCE_ROOT; };
+		FFC20B9C19C4FAE04EC0B627 /* App/Views/NodesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/Views/NodesView.swift; sourceTree = SOURCE_ROOT; };
+		98BFE8403254DA380C0FDC37 /* SelectedNodeTunnelMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSAdapters/Mihomo/SelectedNodeTunnelMapper.swift; sourceTree = SOURCE_ROOT; };
+		A56F9C6A92184C8DAB110009 /* MihomoStableCandidatePoolBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSAdapters/Mihomo/MihomoStableCandidatePoolBuilder.swift; sourceTree = SOURCE_ROOT; };
+		085DE38919ECC7CE0829F43C /* MihomoTunnelConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunnelContract/VPNTest/MihomoTunnelConfiguration.swift; sourceTree = SOURCE_ROOT; };
+		F26000000000000000000004 /* MihomoTunnelControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunnelContract/VPNTest/MihomoTunnelControl.swift; sourceTree = SOURCE_ROOT; };
+		F26000000000000000000007 /* MihomoTunnelControlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/MihomoTunnelControlTests.swift; sourceTree = SOURCE_ROOT; };
+		4AD33FC85769E39C84729C01 /* NETunnelProviderAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSAdapters/Mihomo/NETunnelProviderAccess.swift; sourceTree = SOURCE_ROOT; };
+		6EAA8935CF8579D7DE1D2A57 /* PacketTunnelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkPacketTunnel/PacketTunnelProvider.swift; sourceTree = SOURCE_ROOT; };
+		F560CF3188CF34C494CC8E5F /* TunnelPlatform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkPacketTunnel/TunnelPlatform.swift; sourceTree = SOURCE_ROOT; };
+		0FF1033993E231854F49ED7D /* PacketFlowBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkPacketTunnel/Bridge/PacketFlowBridge.swift; sourceTree = SOURCE_ROOT; };
+		35D4ECAA7FBE25DF727661A4 /* NetworkPacketTunnel.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; path = NetworkPacketTunnel.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		D72F8D92CFCEDB8E266D3B94 /* NetworkClientVPNTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = NetworkClientVPNTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D10000000000000000000001 /* SharedDomain/DeveloperDiagnosticEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedDomain/DeveloperDiagnosticEvent.swift; sourceTree = SOURCE_ROOT; };
+		D10000000000000000000002 /* iOSAdapters/DeveloperDiagnostics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSAdapters/DeveloperDiagnostics.swift; sourceTree = SOURCE_ROOT; };
+		D40000000000000000000001 /* Tests/DeveloperDiagnosticsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/DeveloperDiagnosticsTests.swift; sourceTree = SOURCE_ROOT; };
+		2972F3637B431A216C071AC4 /* VPNObsoleteDataRemoval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunnelContract/VPNTest/VPNObsoleteDataRemoval.swift; sourceTree = SOURCE_ROOT; };
+		9796FD63D5599B06534C85FA /* VPNObsoleteDataRemovalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/VPNObsoleteDataRemovalTests.swift; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		05A219E03BBB2EF083AE1853 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		12384B5908BE5FE5B3301CEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8843DB5659E9022FD545FA43 /* Yams in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99C7943D90D870A50ADE9160 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDD88990312DB11BDF8FFD5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				793785A56D850E8A286E7CA4 /* Yams in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C9E4D5E4F90DC534AC1E154 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0F1E2D3C4B5A697887780001 /* Mihomo */ = {
+			isa = PBXGroup;
+			children = (
+				0F1E2D3C4B5A697887760001 /* MihomoBridgeConcurrency.swift */,
+				0F1E2D3C4B5A697887760002 /* MihomoCoreBridge.swift */,
+				0F1E2D3C4B5A697887760003 /* AppOnlyRecoveryRuntime.swift */,
+				0F1E2D3C4B5A697887760004 /* RecoveryNodeMapper.swift */,
+				0F1E2D3C4B5A697887760005 /* BuiltInProxyBridge.swift */,
+				0F1E2D3C4B5A697887760006 /* MihomoAppPlatform.m */,
+				0F1E2D3C4B5A697887760007 /* MihomoAppPlatform.h */,
+				0F1E2D3C4B5A697887760008 /* Mihomo-Bridging-Header.h */,
+				98BFE8403254DA380C0FDC37 /* SelectedNodeTunnelMapper.swift */,
+				A56F9C6A92184C8DAB110009 /* MihomoStableCandidatePoolBuilder.swift */,
+				4AD33FC85769E39C84729C01 /* NETunnelProviderAccess.swift */,
+
+			);
+			name = Mihomo;
+			sourceTree = "<group>";
+		};
+		148A2CD2951A39E24C26AEB0 /* iOSAdapters */ = {
+			isa = PBXGroup;
+			children = (
+				0F1E2D3C4B5A697887780001 /* Mihomo */,
+				72777E522A7DABDE5C838E2A /* iOSAdapters/UserSystemLogger.swift */,
+				D10000000000000000000002 /* iOSAdapters/DeveloperDiagnostics.swift */,
+				F7378B3378F56C00293D705D /* iOSAdapters/SessionStore.swift */,
+				3DC0B29A66E43CE74F8BD493 /* iOSAdapters/AppSettings.swift */,
+				77426F00801ABFE5D7F29FFE /* iOSAdapters/SafeLog.swift */,
+				C052C2DFF9A4D7CA4DAD81D9 /* iOSAdapters/UnavailableRecoveryRuntime.swift */,
+				7826671E6EED9AFBFF8FB667 /* iOSAdapters/NodeSelectionStore.swift */,
+			);
+			name = iOSAdapters;
+			sourceTree = "<group>";
+		};
+		49FD95CD032EF842D70FF423 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				3F748340418F722125BB9726 /* App/NetworkClientApp.swift */,
+				F1B600000000000000000004 /* App/GlobalModal.swift */,
+				88A4B5587D070B8F12ADB381 /* App/AppModel.swift */,
+				A56F9C6A92184C8DAB110003 /* App/NodeSessionCoordinator.swift */,
+				A56F9C6A92184C8DAB110006 /* App/NodeLatencyCoordinator.swift */,
+				F3A100000000000000000003 /* App/MinimalVPNController.swift */,
+				03288C46357B1C0ABFC1A525 /* App/Views/SettingsView.swift */,
+				07AC22C5DC8F8F4F9311B920 /* App/Views/ProfileView.swift */,
+				17E659160EACB56EDECDFB98 /* App/Views/HomeView.swift */,
+				148CDC0B8DB96F05181BDE2A /* App/Views/RootView.swift */,
+				20242C47392A28B48E0D52D0 /* App/Views/AuthView.swift */,
+				91752FD2C3337AF27D54B5D6 /* App/Views/CommerceView.swift */,
+				FFC20B9C19C4FAE04EC0B627 /* App/Views/NodesView.swift */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		8422D14A828F629ECB0EAD99 /* TunnelContract */ = {
+			isa = PBXGroup;
+			children = (
+				2972F3637B431A216C071AC4 /* VPNObsoleteDataRemoval.swift */,
+				A3AD22EB9D65D2B29CE40C66 /* TunnelContract/VPNContract.swift */,
+				085DE38919ECC7CE0829F43C /* MihomoTunnelConfiguration.swift */,
+				F26000000000000000000004 /* MihomoTunnelControl.swift */,
+			);
+			name = TunnelContract;
+			sourceTree = "<group>";
+		};
+		A9ADE7F75AB2B2BEBD8F6B86 /* SharedDomain */ = {
+			isa = PBXGroup;
+			children = (
+				E10000000000000000000101 /* SharedDomain/AppUpdateModels.swift */,
+				90C5505BF31D2A59F44958D7 /* SharedDomain/UserSession.swift */,
+				6FBC383F73AFB25C603F7E46 /* SharedDomain/ProfileModels.swift */,
+				6BFFF8D242E3ED596C047CA6 /* SharedDomain/ParsedSubscription.swift */,
+				0A88A9533E9159F96AE39034 /* SharedDomain/YAMLValue.swift */,
+				22031A740FCBF490002B6727 /* SharedDomain/BuiltInProxyEndpoint.swift */,
+				E2A93CB3D6C48EB2803C6A23 /* SharedDomain/ProxyNode.swift */,
+				8C9357DF4B87BBB7FEEB8932 /* SharedDomain/PurchaseCommerceModels.swift */,
+				417B023C7D0B57AF2CB011EF /* SharedDomain/NodeIdentity.swift */,
+				87819F9DC75FB5086F6B8524 /* SharedDomain/HomeModels.swift */,
+				2A70E311AAB5675817BFC8C0 /* SharedDomain/CountryFlagResolver.swift */,
+				1D9C8DEF966BE2474D6D8E28 /* SharedDomain/RemoteConfig.swift */,
+				1CF4F376D55A2DF23CC368A5 /* SharedDomain/ProxyMode.swift */,
+				F7E2122FF762E9AB556DC05D /* SharedDomain/LocalizedMessage.swift */,
+				C78E1B385610CF7D3ECD0C33 /* SharedDomain/RegistrationConfig.swift */,
+				8BAE66C5E8D436419D1128A2 /* SharedDomain/UserLogEntry.swift */,
+				D10000000000000000000001 /* SharedDomain/DeveloperDiagnosticEvent.swift */,
+			);
+			name = SharedDomain;
+			sourceTree = "<group>";
+		};
+		B28B7AF69320201D1CF206EB = {
+			isa = PBXGroup;
+			children = (
+				BD160601D79711BB1D1AD353 /* Tests/BrandTests.swift */,
+				D40000000000000000000001 /* Tests/DeveloperDiagnosticsTests.swift */,
+				F3C100000000000000000002 /* MihomoTunnelStoreTests.swift */,
+				F3762E20002834A9934DCEA2 /* Resources/BrandFixtures/Profiles.json */,
+				2B924D2B06E59457C92C1167 /* App/BrandUI.swift */,
+				DD4A12359C28070C9E7F4215 /* iOSAdapters/BrandProvider.swift */,
+				A0B100000000000000000001 /* Configuration/Base.xcconfig */,
+				A0B100000000000000000002 /* Configuration/Public.xcconfig */,
+				4D7568F73DA8FFBBD93D5073 /* Resources/NetworkEndpoints.json */,
+				D1168C8254A2395171972144 /* Resources/UIFixture.json */,
+				766F1C52E00478D753230C84 /* Resources/BrandTheme.json */,
+				9C7A5417DE615256056ECFA7 /* Resources/BrandFixtures/ThemeB.json */,
+				BF6A5C508AAA2669B293CE2F /* Resources/BrandFixtures/BrandB.json */,
+				798C56C5933FFD1D67899252 /* Resources/BrandFixtures/BrandA.json */,
+				00313AC00E34DEF13922B053 /* Resources/BrandFixtures/LogoA.png */,
+				84E3BBC55F11390E63A4FBA8 /* Resources/BrandFixtures/ThemeA.json */,
+				48EA681CDA8AACDF49592930 /* Resources/BrandFixtures/LogoB.png */,
+				49FD95CD032EF842D70FF423 /* App */,
+				A9ADE7F75AB2B2BEBD8F6B86 /* SharedDomain */,
+				C3D6C7A3D142FF1DE4C0A5DE /* SharedServices */,
+				148A2CD2951A39E24C26AEB0 /* iOSAdapters */,
+				8422D14A828F629ECB0EAD99 /* TunnelContract */,
+				BC7EB76B251822782DA55566 /* Tests */,
+				D534E57AD1B058D5C8BD8F49 /* UITests */,
+				B3D57D810E8D9169C02AFD20 /* Resources */,
+				FBDC4F23F93125BBEEAE800C /* Products */,
+				6EAA8935CF8579D7DE1D2A57 /* PacketTunnelProvider.swift */,
+				A21000000000000000000101 /* GeoDataManifest.swift */,
+				A21000000000000000000102 /* GeoDataReadiness.swift */,
+				A21000000000000000000103 /* GeoDataPreparer.swift */,
+				F489951D7EB021646CDB5290 /* ProviderRuntime.swift */,
+				A4F100000000000000000003 /* NetworkInterfaceInventory.swift */,
+				A5B100000000000000000004 /* IPv4CaptureRouteBuilder.swift */,
+				F560CF3188CF34C494CC8E5F /* TunnelPlatform.swift */,
+				A21000000000000000000104 /* PROVENANCE.json */,
+				A0C100000000000000000005 /* NetworkPacketTunnel/PrivacyInfo.xcprivacy */,
+				A21000000000000000000105 /* GeoDataArchitectureTests.swift */,
+				0FF1033993E231854F49ED7D /* PacketFlowBridge.swift */,
+
+			);
+			sourceTree = "<group>";
+		};
+		B3D57D810E8D9169C02AFD20 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A0B400000000000000000003 /* GeneratedBrandAssets.xcassets */,
+				01479558C5A10083CF5B02AD /* Resources/bootstrap.json */,
+				A0C100000000000000000003 /* Resources/PrivacyInfo.xcprivacy */,
+				66D3C22D9D360D909FA84430 /* Resources/Localizable.xcstrings */,
+				CFEF8106816C9945F23BAA2E /* Resources/Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		BC7EB76B251822782DA55566 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F1B600000000000000000005 /* Tests/GlobalModalTests.swift */,
+				A5B100000000000000000005 /* IPv4CaptureRouteBuilderTests.swift */,
+				9796FD63D5599B06534C85FA /* VPNObsoleteDataRemovalTests.swift */,
+				0F1E2D3C4B5A69788776000A /* MihomoRecoveryTests.swift */,
+				AA104DE931E27BF277F0B54D /* Tests/BusinessTests.swift */,
+				F0A1B2C3D4E5F60718293A6B /* Tests/APIHealthMonitorTests.swift */,
+				3ADE90BCB0F80D63AB2EEB78 /* Tests/SubscriptionTests.swift */,
+				F3A100000000000000000005 /* Tests/MinimalVPNControllerTests.swift */,
+				F3F100000000000000000005 /* ProviderRuntimeTests.swift */,
+				F26000000000000000000007 /* MihomoTunnelControlTests.swift */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		C3D6C7A3D142FF1DE4C0A5DE /* SharedServices */ = {
+			isa = PBXGroup;
+			children = (
+				E10000000000000000000102 /* SharedServices/AppUpdateService.swift */,
+				132602F4480EB32E0451B8A8 /* SharedServices/NodeRepository.swift */,
+				426466C4FCFCD7D150846CBF /* SharedServices/APIRecoveryRouter.swift */,
+				F0A1B2C3D4E5F60718293A4B /* SharedServices/NetworkTransport.swift */,
+				F0A1B2C3D4E5F60718293A5B /* SharedServices/APIHealthMonitor.swift */,
+				A0E5752F5D4DB69FABA25E7C /* SharedServices/AuthValidation.swift */,
+				F99BEE8B42196BA972BA372B /* SharedServices/V2BoardAPIClient.swift */,
+				878A2CBA52D2607E2C748DF4 /* SharedServices/BuiltInProxyParser.swift */,
+				CAABCBF60F5532C0306C8FD2 /* SharedServices/SubscriptionParser.swift */,
+				86C7748EB857B07098ECC9E1 /* SharedServices/SupportLinkResolver.swift */,
+				6CFAF51ED1EF840F9A0CF2C2 /* SharedServices/TrafficFormatter.swift */,
+				0B39539FE2A9AC1EF5B6D1FA /* SharedServices/RemoteConfigService.swift */,
+				0521E0816B2E2FA79C2D1D97 /* SharedServices/V2BoardAPIErrorParser.swift */,
+				B36021A082A0AE5923CE6358 /* SharedServices/PendingPaymentStore.swift */,
+				1DBCC40F0692C2B131C60322 /* SharedServices/SubscriptionFetcher.swift */,
+				94A92E496627EFBD73265E47 /* SharedServices/Contracts/NodeRepositoryProtocol.swift */,
+				2B1CDEC00A65205A6CA59C15 /* SharedServices/Contracts/NodeSelectionStoreProtocol.swift */,
+			);
+			name = SharedServices;
+			sourceTree = "<group>";
+		};
+		D534E57AD1B058D5C8BD8F49 /* UITests */ = {
+			isa = PBXGroup;
+			children = (
+				CF74AC17C4D2FB331F6FA9EB /* UITests/LaunchTests.swift */,
+			);
+			name = UITests;
+			sourceTree = "<group>";
+		};
+		FBDC4F23F93125BBEEAE800C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E6FC57C251E9E1BEC1D3C0D2 /* NetworkClient.app */,
+				B7480EC88B7F22D0A4757273 /* NetworkClientTests.xctest */,
+				B58968AD397FA1A20599C9F3 /* NetworkClientUITests.xctest */,
+				D72F8D92CFCEDB8E266D3B94 /* NetworkClientVPNTest.app */,
+				35D4ECAA7FBE25DF727661A4 /* NetworkPacketTunnel.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0A06C5E2DA34E686D888A695 /* NetworkClientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87F2532CB576F7CE6EB48F72 /* Build configuration list for PBXNativeTarget "NetworkClientTests" */;
+			buildPhases = (
+				9F3002A5D69B22D357A58AA9 /* Sources */,
+				99C7943D90D870A50ADE9160 /* Frameworks */,
+				C584AE92222380FB29B6223F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A5CC8802088F5DB9829D610B /* PBXTargetDependency */,
+			);
+			name = NetworkClientTests;
+			packageProductDependencies = (
+			);
+			productName = NetworkClientTests;
+			productReference = B7480EC88B7F22D0A4757273 /* NetworkClientTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0AD4B07A83E05DBD45B7FC37 /* NetworkClientUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47BBC71898C1B0EA1045A288 /* Build configuration list for PBXNativeTarget "NetworkClientUITests" */;
+			buildPhases = (
+				163D39D31938BBA478C0E98C /* Sources */,
+				05A219E03BBB2EF083AE1853 /* Frameworks */,
+				5EB9CCB577FB52F9372C4A07 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A6BE8AAAF53B79FD2DBEC6E5 /* PBXTargetDependency */,
+			);
+			name = NetworkClientUITests;
+			packageProductDependencies = (
+			);
+			productName = NetworkClientUITests;
+			productReference = B58968AD397FA1A20599C9F3 /* NetworkClientUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		4F6027D858B72CC70E5CC8E9 /* NetworkClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 60EA43DB068BD71C9709BED5 /* Build configuration list for PBXNativeTarget "NetworkClient" */;
+			buildPhases = (
+				C2CE3518964DA6426D0AA3A1 /* Validate Installation Branding */,
+				B6A100000000000000000001 /* Generate Brand Local Logo */,
+				2D764CD838DB39F040AA7EC4 /* Sources */,
+				12384B5908BE5FE5B3301CEE /* Frameworks */,
+				06F5DC629BD46AAFD46564D1 /* Resources */,
+				F2B600000000000000000001 /* Prepare Debug Test Fixtures */,
+				A0B300000000000000000001 /* Prepare Bootstrap Resource */,
+				F1A500000000000000000003 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F1A500000000000000000004 /* PBXTargetDependency */,
+			);
+			name = NetworkClient;
+			packageProductDependencies = (
+				1CE20F2F49D079F7DA16C6FA /* Yams */,
+			);
+			productName = NetworkClient;
+			productReference = E6FC57C251E9E1BEC1D3C0D2 /* NetworkClient.app */;
+			productType = "com.apple.product-type.application";
+		};
+		65FFF21843C6A9F07D8CF1DF /* NetworkPacketTunnel */ = {isa = PBXNativeTarget; buildConfigurationList = 128DB953DD964EE3247F37E0; buildPhases = (107D5B0914758EA31E7B586D, 9C9E4D5E4F90DC534AC1E154, B15000000000000000000005); buildRules = (); dependencies = (); name = NetworkPacketTunnel; productName = NetworkPacketTunnel; productReference = 35D4ECAA7FBE25DF727661A4; productType = "com.apple.product-type.app-extension"; };
+		E89E9A4531998185C08D1D43 /* NetworkClientVPNTest */ = {isa = PBXNativeTarget; buildConfigurationList = EFF88057BD06C19263BA3F51; buildPhases = (B6A100000000000000000002 /* Generate Brand Local Logo */, 11DF5CC95A359F15C636A5C8, EDD88990312DB11BDF8FFD5A, B3BD7EEEC4E278A573F1C823, A0B300000000000000000002 /* Prepare Bootstrap Resource */, DB825654ACECA0A82608AC0A); buildRules = (); dependencies = (2A429988AB8738B970016E59); name = NetworkClientVPNTest; packageProductDependencies = (1CE20F2F49D079F7DA16C6FA /* Yams */); productName = NetworkClientVPNTest; productReference = D72F8D92CFCEDB8E266D3B94; productType = "com.apple.product-type.application"; };
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		98F54143AB4E86B28C3AFEE0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 2710;
+			};
+			buildConfigurationList = 862894B703A6DEDF96A9DD6C /* Build configuration list for PBXProject "NetworkClient-iOS" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = "zh-Hans";
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				"zh-Hans",
+				en,
+				Base,
+			);
+			mainGroup = B28B7AF69320201D1CF206EB;
+			packageReferences = (
+				54039552E5DA64155F69E8DA /* XCLocalSwiftPackageReference "Vendor/Yams" */,
+			);
+			productRefGroup = FBDC4F23F93125BBEEAE800C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4F6027D858B72CC70E5CC8E9 /* NetworkClient */,
+				0A06C5E2DA34E686D888A695 /* NetworkClientTests */,
+				0AD4B07A83E05DBD45B7FC37 /* NetworkClientUITests */,
+				E89E9A4531998185C08D1D43 /* NetworkClientVPNTest */,
+				65FFF21843C6A9F07D8CF1DF /* NetworkPacketTunnel */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B15000000000000000000005 /* Tunnel GeoData Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0C100000000000000000004 /* NetworkPacketTunnel/PrivacyInfo.xcprivacy in Resources */,
+				B15000000000000000000008 /* Resources/NetworkEndpoints.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06F5DC629BD46AAFD46564D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0C100000000000000000001 /* Resources/PrivacyInfo.xcprivacy in Resources */,
+				A0B400000000000000000001 /* GeneratedBrandAssets.xcassets in Resources */,
+				A21000000000000000000014 /* PROVENANCE.json in Resources */,
+				E3A2574282334C6BA2C5C74C /* Resources/NetworkEndpoints.json in Resources */,
+				44D9F2AE347D49393013FF1F /* Resources/BrandTheme.json in Resources */,
+				5DA40DD10E360EB1BD06B52C /* Resources/Localizable.xcstrings in Resources */,
+				08920770699BCD29D8587B5E /* Resources/Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EB9CCB577FB52F9372C4A07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C584AE92222380FB29B6223F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3BD7EEEC4E278A573F1C823 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0C100000000000000000002 /* Resources/PrivacyInfo.xcprivacy in Resources */,
+				A0B400000000000000000002 /* GeneratedBrandAssets.xcassets in Resources */,
+				A21000000000000000000018 /* PROVENANCE.json in Resources */,
+				D754543692C809C00611C250 /* Resources/BrandFixtures/Profiles.json in Resources */,
+				164711F85ACC2238E39DCC10 /* Resources/NetworkEndpoints.json in Resources */,
+				10A7E6B8249FBD3E84B912D2 /* Resources/UIFixture.json in Resources */,
+				1B7FF2984DC735C6B4AC2071 /* Resources/BrandTheme.json in Resources */,
+				DA9FF54911A9AAAA84026C92 /* Resources/BrandFixtures/ThemeB.json in Resources */,
+				4ACF6D4B154C40F4139E6CBC /* Resources/BrandFixtures/BrandB.json in Resources */,
+				DDA33D89E729FABBEF22F2CD /* Resources/BrandFixtures/BrandA.json in Resources */,
+				811A24B3DDECC0C15E6FAD96 /* Resources/BrandFixtures/LogoA.png in Resources */,
+				C676EB79EEF6F3E4094A769A /* Resources/BrandFixtures/ThemeA.json in Resources */,
+				38FA36A7D6779722C21BB93E /* Resources/BrandFixtures/LogoB.png in Resources */,
+				0775FB4934149FC95B63F514 /* Resources/Localizable.xcstrings in Resources */,
+				6A709C2619DDBFB1D9E812B0 /* Resources/Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A0B300000000000000000001 /* Prepare Bootstrap Resource */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Scripts/prepare-bootstrap-resource.sh",
+			);
+			name = "Prepare Bootstrap Resource";
+			outputPaths = (
+				"$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/$(BRAND_BOOTSTRAP_RESOURCE).json",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/bin/sh \"$SRCROOT/Scripts/prepare-bootstrap-resource.sh\"\n";
+		};
+		A0B300000000000000000002 /* Prepare Bootstrap Resource */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Scripts/prepare-bootstrap-resource.sh",
+			);
+			name = "Prepare Bootstrap Resource";
+			outputPaths = (
+				"$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/$(BRAND_BOOTSTRAP_RESOURCE).json",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/bin/sh \"$SRCROOT/Scripts/prepare-bootstrap-resource.sh\"\n";
+		};
+		B6A100000000000000000001 /* Generate Brand Local Logo */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Scripts/prepare-brand-assets.sh",
+				"$(SRCROOT)/Scripts/generate-brand-local-logo.sh",
+			);
+			name = "Generate Brand Local Logo";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/GeneratedBrandAssets.xcassets",
+				"$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/$(BRAND_LOCAL_LOGO_RESOURCE).png",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Scripts/generate-brand-local-logo.sh is invoked by the asset preparer.\n/bin/sh \"$SRCROOT/Scripts/prepare-brand-assets.sh\"\n";
+		};
+		B6A100000000000000000002 /* Generate Brand Local Logo */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Scripts/prepare-brand-assets.sh",
+				"$(SRCROOT)/Scripts/generate-brand-local-logo.sh",
+			);
+			name = "Generate Brand Local Logo";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/GeneratedBrandAssets.xcassets",
+				"$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/$(BRAND_LOCAL_LOGO_RESOURCE).png",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Scripts/generate-brand-local-logo.sh is invoked by the asset preparer.\n/bin/sh \"$SRCROOT/Scripts/prepare-brand-assets.sh\"\n";
+		};
+		C2CE3518964DA6426D0AA3A1 /* Validate Installation Branding */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Scripts/validate-brand.py",
+				"$(SRCROOT)/Resources/$(BRAND_THEME_RESOURCE).json",
+				"$(SRCROOT)/Resources/$(BRAND_NETWORK_RESOURCE).json",
+				"$(BOOTSTRAP_INPUT_PATH)",
+				"$(BRAND_SOURCE_IMAGE_PATH)",
+			);
+			name = "Validate Installation Branding";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 \"$SRCROOT/Scripts/validate-brand.py\"\n";
+		};
+		F2B600000000000000000001 /* Prepare Debug Test Fixtures */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Scripts/prepare-test-fixtures.sh",
+				"$(SRCROOT)/Resources/BrandFixtures/BrandA.json",
+				"$(SRCROOT)/Resources/BrandFixtures/BrandB.json",
+				"$(SRCROOT)/Resources/BrandFixtures/LogoA.png",
+				"$(SRCROOT)/Resources/BrandFixtures/LogoB.png",
+				"$(SRCROOT)/Resources/BrandFixtures/Profiles.json",
+				"$(SRCROOT)/Resources/BrandFixtures/ThemeA.json",
+				"$(SRCROOT)/Resources/BrandFixtures/ThemeB.json",
+				"$(SRCROOT)/Resources/UIFixture.json",
+			);
+			name = "Prepare Debug Test Fixtures";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/bin/sh \"$SRCROOT/Scripts/prepare-test-fixtures.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		163D39D31938BBA478C0E98C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A1873C8AB7DCFC8FA595FEF /* UITests/LaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D764CD838DB39F040AA7EC4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E10000000000000000000001 /* SharedDomain/AppUpdateModels.swift in Sources */,
+				E10000000000000000000003 /* SharedServices/AppUpdateService.swift in Sources */,
+				F1B600000000000000000001 /* App/GlobalModal.swift in Sources */,
+				A21000000000000000000001 /* GeoDataManifest.swift in Sources */,
+				A21000000000000000000004 /* GeoDataReadiness.swift in Sources */,
+				A21000000000000000000007 /* GeoDataPreparer.swift in Sources */,
+				06B245BF6A4E2E0ACD026FDB /* VPNObsoleteDataRemoval.swift in Sources */,
+				F1A500000000000000000001 /* NETunnelProviderAccess.swift in Sources */,
+				0F1E2D3C4B5A697887770001 /* MihomoBridgeConcurrency.swift in Sources */,
+				0F1E2D3C4B5A697887770002 /* MihomoCoreBridge.swift in Sources */,
+				0F1E2D3C4B5A697887770003 /* AppOnlyRecoveryRuntime.swift in Sources */,
+				0F1E2D3C4B5A697887770004 /* RecoveryNodeMapper.swift in Sources */,
+				0F1E2D3C4B5A697887770005 /* BuiltInProxyBridge.swift in Sources */,
+				0F1E2D3C4B5A697887770006 /* MihomoAppPlatform.m in Sources */,
+				2B1803062D924939CA284C82 /* App/BrandUI.swift in Sources */,
+				48EEF959222DBEA65BE807C0 /* iOSAdapters/BrandProvider.swift in Sources */,
+				93BB01A600251965E359F78D /* App/NetworkClientApp.swift in Sources */,
+				3CDD80BBCE7F9BBAD261C628 /* App/AppModel.swift in Sources */,
+				A56F9C6A92184C8DAB110001 /* App/NodeSessionCoordinator.swift in Sources */,
+				A56F9C6A92184C8DAB110004 /* App/NodeLatencyCoordinator.swift in Sources */,
+				F3A100000000000000000001 /* App/MinimalVPNController.swift in Sources */,
+				9E022B0C5C14649B170F51FF /* App/Views/SettingsView.swift in Sources */,
+				2BFCCB93B9D494C49FD9A5E5 /* App/Views/ProfileView.swift in Sources */,
+				A38BB33B730C7D5E60D7FA0F /* App/Views/HomeView.swift in Sources */,
+				0B1071CDBABC2A3A0BED4255 /* App/Views/RootView.swift in Sources */,
+				0638C4DF07132F0D2F7ABB4F /* App/Views/AuthView.swift in Sources */,
+				8D4A066C78FD1992702F274C /* App/Views/CommerceView.swift in Sources */,
+				1392DD8C8F3BB73B549EEF71 /* App/Views/NodesView.swift in Sources */,
+				5D7D576AA22F25170BFAC87A /* SharedDomain/UserSession.swift in Sources */,
+				ABB38393A5D8D117E5465DBC /* SharedDomain/ProfileModels.swift in Sources */,
+				34B205E0EAB916ED09AD00B1 /* SharedDomain/ParsedSubscription.swift in Sources */,
+				88BD435CCFEEA00047B1CD76 /* SharedDomain/YAMLValue.swift in Sources */,
+				FDC78A8628D5421A527F3E81 /* SharedDomain/BuiltInProxyEndpoint.swift in Sources */,
+				06868318DD5FA489F4E0154E /* SharedDomain/ProxyNode.swift in Sources */,
+				48DBA6AF0809418DA3DE2211 /* SharedDomain/PurchaseCommerceModels.swift in Sources */,
+				8E713FEA8E6686AE45E4DBF8 /* SharedDomain/NodeIdentity.swift in Sources */,
+				1225C4D625F6D5F8EAAD7DC8 /* SharedDomain/HomeModels.swift in Sources */,
+				C0EA5FE23FF066E1F1E0412F /* SharedDomain/CountryFlagResolver.swift in Sources */,
+				8856AC472BFECF595DB9DF6C /* SharedDomain/RemoteConfig.swift in Sources */,
+				4842E70136CD5B323186A247 /* SharedDomain/ProxyMode.swift in Sources */,
+				B641FC8CD998D0928A068118 /* SharedDomain/LocalizedMessage.swift in Sources */,
+				5BB3AF704D9080E24B11D025 /* SharedDomain/RegistrationConfig.swift in Sources */,
+				36A974B244C805B881461178 /* SharedDomain/UserLogEntry.swift in Sources */,
+				698DEE836A831F65EAC0DDFB /* SharedServices/NodeRepository.swift in Sources */,
+				E471448C4FE71C9E9A10C40C /* SharedServices/APIRecoveryRouter.swift in Sources */,
+				F0A1B2C3D4E5F60718293A4C /* SharedServices/NetworkTransport.swift in Sources */,
+				F0A1B2C3D4E5F60718293A5C /* SharedServices/APIHealthMonitor.swift in Sources */,
+				BD87A40FE439AD80455DFDBC /* SharedServices/AuthValidation.swift in Sources */,
+				513F1006E3F0D441101B469A /* SharedServices/V2BoardAPIClient.swift in Sources */,
+				6E37C6908C775CC43FA183B7 /* SharedServices/BuiltInProxyParser.swift in Sources */,
+				0270DE2D961040856BF4CED0 /* SharedServices/SubscriptionParser.swift in Sources */,
+				249EC37D0FDEC4C3C070F864 /* SharedServices/SupportLinkResolver.swift in Sources */,
+				AB322162054B369D3710B53B /* SharedServices/TrafficFormatter.swift in Sources */,
+				9C10BB88A3B7BF19B54FBBEB /* SharedServices/RemoteConfigService.swift in Sources */,
+				3614B6B21ACCEC0AB18028FA /* SharedServices/V2BoardAPIErrorParser.swift in Sources */,
+				37D1BFF4220D8813CBB6E501 /* SharedServices/PendingPaymentStore.swift in Sources */,
+				E23AA10463B1E1BF56BC8505 /* SharedServices/SubscriptionFetcher.swift in Sources */,
+				24829B1049C3198927E80954 /* SharedServices/Contracts/NodeRepositoryProtocol.swift in Sources */,
+				E5ACF0E9341661F5934D94E6 /* SharedServices/Contracts/NodeSelectionStoreProtocol.swift in Sources */,
+				BDA1D900FF7B281A4DB17EE7 /* iOSAdapters/UserSystemLogger.swift in Sources */,
+				D20000000000000000000001 /* DeveloperDiagnosticEvent.swift in Sources */,
+				D20000000000000000000002 /* DeveloperDiagnostics.swift in Sources */,
+				3CFBD4A25900FAD120480F53 /* iOSAdapters/SessionStore.swift in Sources */,
+				938504ABB191853F08F7271B /* iOSAdapters/AppSettings.swift in Sources */,
+				04BD6174B2CDD94B935669C8 /* iOSAdapters/SafeLog.swift in Sources */,
+				7FFB22F2FA923C2CC47F1047 /* iOSAdapters/UnavailableRecoveryRuntime.swift in Sources */,
+				D91C40A9CF3317B156F12349 /* iOSAdapters/NodeSelectionStore.swift in Sources */,
+				A36B9A2C08C33A045DDCE4FA /* TunnelContract/VPNContract.swift in Sources */,
+				3531D5741CEAB1C5669B8426 /* SelectedNodeTunnelMapper.swift in Sources */,
+				A56F9C6A92184C8DAB110007 /* MihomoStableCandidatePoolBuilder.swift in Sources */,
+				27B7C5303E67AA76EEF38473 /* MihomoTunnelConfiguration.swift in Sources */,
+				F26000000000000000000005 /* MihomoTunnelControl.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F3002A5D69B22D357A58AA9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1B600000000000000000003 /* Tests/GlobalModalTests.swift in Sources */,
+				A5B100000000000000000002 /* IPv4CaptureRouteBuilder.swift in Sources */,
+				A5B100000000000000000003 /* IPv4CaptureRouteBuilderTests.swift in Sources */,
+				A21000000000000000000021 /* GeoDataArchitectureTests.swift in Sources */,
+				4AF8B72276E5D334C923C23D /* VPNObsoleteDataRemovalTests.swift in Sources */,
+				CE897E30F29451E03E868100 /* ProviderRuntime.swift in Sources */,
+				A4F100000000000000000001 /* NetworkInterfaceInventory.swift in Sources */,
+				F3F100000000000000000004 /* ProviderRuntimeTests.swift in Sources */,
+				0F1E2D3C4B5A69788777000A /* MihomoRecoveryTests.swift in Sources */,
+				05428844324BAEB9028AF891 /* Tests/BrandTests.swift in Sources */,
+				D30000000000000000000001 /* DeveloperDiagnosticsTests.swift in Sources */,
+				F3C100000000000000000001 /* MihomoTunnelStoreTests.swift in Sources */,
+				08DF752E40AD7AA379B1BF56 /* Tests/BusinessTests.swift in Sources */,
+				F0A1B2C3D4E5F60718293A6C /* Tests/APIHealthMonitorTests.swift in Sources */,
+				0011A4644FBA383A7496DA04 /* Tests/SubscriptionTests.swift in Sources */,
+				F3A100000000000000000004 /* Tests/MinimalVPNControllerTests.swift in Sources */,
+				F26000000000000000000001 /* MihomoTunnelControl.swift in Sources */,
+				F26000000000000000000006 /* MihomoTunnelControlTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11DF5CC95A359F15C636A5C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E10000000000000000000002 /* SharedDomain/AppUpdateModels.swift in Sources */,
+				E10000000000000000000004 /* SharedServices/AppUpdateService.swift in Sources */,
+				F1B600000000000000000002 /* App/GlobalModal.swift in Sources */,
+				A21000000000000000000002 /* GeoDataManifest.swift in Sources */,
+				A21000000000000000000005 /* GeoDataReadiness.swift in Sources */,
+				A21000000000000000000008 /* GeoDataPreparer.swift in Sources */,
+				69F8C2AFBBF6FAA43F380D70 /* VPNObsoleteDataRemoval.swift in Sources */,
+				EA33DE71BECF90BE4160C3AC /* MihomoBridgeConcurrency.swift in Sources */,
+				82447452E547F7A0691CAF78 /* MihomoCoreBridge.swift in Sources */,
+				D6A44F73A1C260FB5094B745 /* AppOnlyRecoveryRuntime.swift in Sources */,
+				2117DC3DF4E51072C85E4B73 /* RecoveryNodeMapper.swift in Sources */,
+				FD3A6AFBC22ECE5B3E1D522A /* BuiltInProxyBridge.swift in Sources */,
+				DD801AE29E10A26FB20301CB /* MihomoAppPlatform.m in Sources */,
+				F6FECF8FC547CF30CCE6C97A /* App/BrandUI.swift in Sources */,
+				179534BD5FE841F9F8222BD8 /* iOSAdapters/BrandProvider.swift in Sources */,
+				F926A4C34968C785B48AA410 /* App/NetworkClientApp.swift in Sources */,
+				B968E37A67D54992AA030080 /* App/AppModel.swift in Sources */,
+				A56F9C6A92184C8DAB110002 /* App/NodeSessionCoordinator.swift in Sources */,
+				A56F9C6A92184C8DAB110005 /* App/NodeLatencyCoordinator.swift in Sources */,
+				F3A100000000000000000002 /* App/MinimalVPNController.swift in Sources */,
+				2D619F629671E408E4471EDF /* App/Views/SettingsView.swift in Sources */,
+				58DF5DEAE536EA5DEF8EF5DE /* App/Views/ProfileView.swift in Sources */,
+				C195DD1EA8A9B138051D8EBF /* App/Views/HomeView.swift in Sources */,
+				80470DF3AEB1548DD74028A6 /* App/Views/RootView.swift in Sources */,
+				BAC8BE50D5D9D633A8F0EB32 /* App/Views/AuthView.swift in Sources */,
+				B20F3E7DB4A6E6790BFE521B /* App/Views/CommerceView.swift in Sources */,
+				BCC93411179B24C027564B8B /* App/Views/NodesView.swift in Sources */,
+				B1E3E2D660F52678295108D9 /* SharedDomain/UserSession.swift in Sources */,
+				F7B124D21F9E6886F5A52E7E /* SharedDomain/ProfileModels.swift in Sources */,
+				1DF77F2D907C0ECC70518FC7 /* SharedDomain/ParsedSubscription.swift in Sources */,
+				D5E3DCFAAEDDDC7ADDCF58FD /* SharedDomain/YAMLValue.swift in Sources */,
+				798D1CA6FE088B14FF268358 /* SharedDomain/BuiltInProxyEndpoint.swift in Sources */,
+				55C670D10EAC71B2C79D835C /* SharedDomain/ProxyNode.swift in Sources */,
+				684DF36076D467A414C7A51D /* SharedDomain/PurchaseCommerceModels.swift in Sources */,
+				29EE497E657EC2D38817F5C2 /* SharedDomain/NodeIdentity.swift in Sources */,
+				7A04EEF9DC1B4511E305CAF7 /* SharedDomain/HomeModels.swift in Sources */,
+				82A5818BA33064E581DEA566 /* SharedDomain/CountryFlagResolver.swift in Sources */,
+				49D6D275AC3A8A1BB6877A94 /* SharedDomain/RemoteConfig.swift in Sources */,
+				9E1CCA89AF23DD2001FCCA18 /* SharedDomain/ProxyMode.swift in Sources */,
+				93E1A66DA5E1F52EA81E34F3 /* SharedDomain/LocalizedMessage.swift in Sources */,
+				9697DC29E772C50AAD1B7AB0 /* SharedDomain/RegistrationConfig.swift in Sources */,
+				46233B8A29E013680E7713C6 /* SharedDomain/UserLogEntry.swift in Sources */,
+				D7CA8A68E1EE797AA4C98AF5 /* SharedServices/NodeRepository.swift in Sources */,
+				AB02DED0BF17C33689847312 /* SharedServices/APIRecoveryRouter.swift in Sources */,
+				CDC6CC614E588A58F303856D /* SharedServices/NetworkTransport.swift in Sources */,
+				23EEB22CA6E9EF7FCA0D7668 /* SharedServices/APIHealthMonitor.swift in Sources */,
+				1F84D64FDC403A7C05DFFAAF /* SharedServices/AuthValidation.swift in Sources */,
+				F24E32F116A64152CA1B0881 /* SharedServices/V2BoardAPIClient.swift in Sources */,
+				5F0B069A94BDD977BB75EAA2 /* SharedServices/BuiltInProxyParser.swift in Sources */,
+				49C73E03582FE9ED336C52EC /* SharedServices/SubscriptionParser.swift in Sources */,
+				757F85E6F8FB98B4CE66D160 /* SharedServices/SupportLinkResolver.swift in Sources */,
+				940F790D6DF686ADFA49CF83 /* SharedServices/TrafficFormatter.swift in Sources */,
+				7B20D23C2FD5C6394115ABA5 /* SharedServices/RemoteConfigService.swift in Sources */,
+				EC30FC92C4E6FA2123194384 /* SharedServices/V2BoardAPIErrorParser.swift in Sources */,
+				6C568176A10474966020A11C /* SharedServices/PendingPaymentStore.swift in Sources */,
+				1B93360C16DF88F208DCDFF9 /* SharedServices/SubscriptionFetcher.swift in Sources */,
+				71F6D5C5638811F4BE7994D1 /* SharedServices/Contracts/NodeRepositoryProtocol.swift in Sources */,
+				082C3640ABBE47ACB02C171A /* SharedServices/Contracts/NodeSelectionStoreProtocol.swift in Sources */,
+				BE539F1A4707826DC7D32644 /* iOSAdapters/UserSystemLogger.swift in Sources */,
+				D20000000000000000000004 /* DeveloperDiagnosticEvent.swift in Sources */,
+				D20000000000000000000005 /* DeveloperDiagnostics.swift in Sources */,
+				F2B132F12A689BF09D8FD22E /* iOSAdapters/SessionStore.swift in Sources */,
+				4172C4B799043F18AF392EF2 /* iOSAdapters/AppSettings.swift in Sources */,
+				0120C9466C40BCD8BF398B58 /* iOSAdapters/SafeLog.swift in Sources */,
+				8D7D0F97D4507879053FEA2D /* iOSAdapters/UnavailableRecoveryRuntime.swift in Sources */,
+				E6598AA3036FC2F2621C771C /* iOSAdapters/NodeSelectionStore.swift in Sources */,
+				48E13230E7DAC448182A891A /* TunnelContract/VPNContract.swift in Sources */,
+				BC422338E826634F5326703E /* SelectedNodeTunnelMapper.swift in Sources */,
+				A56F9C6A92184C8DAB110008 /* MihomoStableCandidatePoolBuilder.swift in Sources */,
+				712FEAD857B36F69B60FB021 /* MihomoTunnelConfiguration.swift in Sources */,
+				F26000000000000000000002 /* MihomoTunnelControl.swift in Sources */,
+				238A29A0EBD86C32EF8BA494 /* NETunnelProviderAccess.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		107D5B0914758EA31E7B586D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5B100000000000000000001 /* IPv4CaptureRouteBuilder.swift in Sources */,
+				A21000000000000000000003 /* GeoDataManifest.swift in Sources */,
+				A21000000000000000000006 /* GeoDataReadiness.swift in Sources */,
+				CDF4D2ADCEAEE731D6EFA4B6 /* ProviderRuntime.swift in Sources */,
+				A4F100000000000000000002 /* NetworkInterfaceInventory.swift in Sources */,
+				7DF55A44AAA846C1556713F7 /* PacketTunnelProvider.swift in Sources */,
+				02DAEA9B7F3C923415558861 /* TunnelPlatform.swift in Sources */,
+				61A80D8ED0FD7C4A5D627391 /* PacketFlowBridge.swift in Sources */,
+				3B3ED166A7CEBD8CB6E28519 /* MihomoTunnelConfiguration.swift in Sources */,
+				F26000000000000000000003 /* MihomoTunnelControl.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A5CC8802088F5DB9829D610B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F6027D858B72CC70E5CC8E9 /* NetworkClient */;
+			targetProxy = 3B07A601889A5C98A1E12C74 /* PBXContainerItemProxy */;
+		};
+		A6BE8AAAF53B79FD2DBEC6E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F6027D858B72CC70E5CC8E9 /* NetworkClient */;
+			targetProxy = DC81A1167233FC404FD46B40 /* PBXContainerItemProxy */;
+		};
+		2A429988AB8738B970016E59 /* PBXTargetDependency */ = {isa = PBXTargetDependency; target = 65FFF21843C6A9F07D8CF1DF /* NetworkPacketTunnel */; targetProxy = 25FA5CCFAAA54861C347FCEF /* PBXContainerItemProxy */; };
+		F1A500000000000000000004 /* PBXTargetDependency */ = {isa = PBXTargetDependency; target = 65FFF21843C6A9F07D8CF1DF /* NetworkPacketTunnel */; targetProxy = F1A500000000000000000005 /* PBXContainerItemProxy */; };
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5A8C91857F674E16E2724F47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0B100000000000000000002 /* Configuration/Public.xcconfig */;
+			buildSettings = {
+				INCLUDE_TEST_FIXTURES = NO;
+				CODE_SIGN_ENTITLEMENTS = Configuration/App.entitlements;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "$(BRAND_APP_ICON)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 15;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Configuration/App-Info.plist";
+				INFOPLIST_KEY_BrandBootstrapResource = "$(BRAND_BOOTSTRAP_RESOURCE)";
+				INFOPLIST_KEY_BrandFixtureProfilesResource = "$(BRAND_FIXTURE_PROFILES_RESOURCE)";
+				INFOPLIST_KEY_BrandLocalLogoResource = "$(BRAND_LOCAL_LOGO_RESOURCE)";
+				INFOPLIST_KEY_BrandNetworkResource = "$(BRAND_NETWORK_RESOURCE)";
+				INFOPLIST_KEY_BrandThemeResource = "$(BRAND_THEME_RESOURCE)";
+				INFOPLIST_KEY_CFBundleDisplayName = "$(BRAND_DISPLAY_NAME)";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIFixtureResource = "$(UI_FIXTURE_RESOURCE)";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.2.0;
+				PRODUCT_MODULE_NAME = NetworkClient;
+				PRODUCT_NAME = NetworkClient;
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = iOSAdapters/Mihomo/Mihomo-Bridging-Header.h;
+				OTHER_LDFLAGS = "$(inherited) -lresolv";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		89E1FD6268CC0F221A2BE178 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0B100000000000000000002 /* Configuration/Public.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				MIHOMO_SDK_ROOT = "$(SRCROOT)/Vendor/Mihomo";
+			};
+			name = Debug;
+		};
+		942EEBBACD6C88CAE7F29B29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0B100000000000000000002 /* Configuration/Public.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(UNIT_TEST_BUNDLE_IDENTIFIER)";
+				PRODUCT_MODULE_NAME = NetworkClientTests;
+				PRODUCT_NAME = NetworkClientTests;
+				SDKROOT = iphoneos;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NetworkClient.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NetworkClient";
+			};
+			name = Release;
+		};
+		94C1D7A82E2F92E70C5BA5D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0B100000000000000000002 /* Configuration/Public.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(UI_TEST_BUNDLE_IDENTIFIER)";
+				PRODUCT_MODULE_NAME = NetworkClientUITests;
+				PRODUCT_NAME = NetworkClientUITests;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NetworkClient;
+			};
+			name = Debug;
+		};
+		9609A256A79253DD705A918E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0B100000000000000000002 /* Configuration/Public.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(UI_TEST_BUNDLE_IDENTIFIER)";
+				PRODUCT_MODULE_NAME = NetworkClientUITests;
+				PRODUCT_NAME = NetworkClientUITests;
+				SDKROOT = iphoneos;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NetworkClient;
+			};
+			name = Release;
+		};
+		E6DE6C99132752C914FEF632 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0B100000000000000000002 /* Configuration/Public.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				MIHOMO_SDK_ROOT = "$(SRCROOT)/Vendor/Mihomo";
+			};
+			name = Release;
+		};
+		E9B2E96ABC5F6856F2BE79CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0B100000000000000000002 /* Configuration/Public.xcconfig */;
+			buildSettings = {
+				INCLUDE_TEST_FIXTURES = YES;
+				CODE_SIGN_ENTITLEMENTS = Configuration/App.entitlements;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "$(BRAND_APP_ICON)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 15;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Configuration/App-Info.plist";
+				INFOPLIST_KEY_BrandBootstrapResource = "$(BRAND_BOOTSTRAP_RESOURCE)";
+				INFOPLIST_KEY_BrandFixtureProfilesResource = "$(BRAND_FIXTURE_PROFILES_RESOURCE)";
+				INFOPLIST_KEY_BrandLocalLogoResource = "$(BRAND_LOCAL_LOGO_RESOURCE)";
+				INFOPLIST_KEY_BrandNetworkResource = "$(BRAND_NETWORK_RESOURCE)";
+				INFOPLIST_KEY_BrandThemeResource = "$(BRAND_THEME_RESOURCE)";
+				INFOPLIST_KEY_CFBundleDisplayName = "$(BRAND_DISPLAY_NAME)";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIFixtureResource = "$(UI_FIXTURE_RESOURCE)";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.2.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_MODULE_NAME = NetworkClient;
+				PRODUCT_NAME = NetworkClient;
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = iOSAdapters/Mihomo/Mihomo-Bridging-Header.h;
+				OTHER_LDFLAGS = "$(inherited) -lresolv";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FCB48D8F88BCDB0ED9FADFD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0B100000000000000000002 /* Configuration/Public.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(UNIT_TEST_BUNDLE_IDENTIFIER)";
+				PRODUCT_MODULE_NAME = NetworkClientTests;
+				PRODUCT_NAME = NetworkClientTests;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NetworkClient.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NetworkClient";
+			};
+			name = Debug;
+		};
+		31C496D7538F1758AEDA3E7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0B100000000000000000002 /* Configuration/Public.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "$(BRAND_APP_ICON)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = Configuration/VPNTest/App.entitlements;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(VPN_TEST_BUNDLE_IDENTIFIER)";
+				ROUTE_VALIDATION_PINNED_ADDRESS = "";
+				SKIP_INSTALL = NO;
+				CURRENT_PROJECT_VERSION = 15;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Configuration/VPNTest/App-Info.plist";
+				INFOPLIST_KEY_BrandBootstrapResource = "$(BRAND_BOOTSTRAP_RESOURCE)";
+				INFOPLIST_KEY_BrandFixtureProfilesResource = "$(BRAND_FIXTURE_PROFILES_RESOURCE)";
+				INFOPLIST_KEY_BrandLocalLogoResource = "$(BRAND_LOCAL_LOGO_RESOURCE)";
+				INFOPLIST_KEY_BrandNetworkResource = "$(BRAND_NETWORK_RESOURCE)";
+				INFOPLIST_KEY_BrandThemeResource = "$(BRAND_THEME_RESOURCE)";
+				INFOPLIST_KEY_CFBundleDisplayName = "$(BRAND_DISPLAY_NAME) VPN";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIFixtureResource = "$(UI_FIXTURE_RESOURCE)";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.2.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_MODULE_NAME = NetworkClient;
+				PRODUCT_NAME = NetworkClientVPNTest;
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = iOSAdapters/Mihomo/Mihomo-Bridging-Header.h;
+				OTHER_LDFLAGS = "$(inherited) -lresolv";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG NETWORKCLIENT_VPN_TEST";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1D55C4D049A7162A51086688 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0B100000000000000000002 /* Configuration/Public.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "$(BRAND_APP_ICON)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = Configuration/VPNTest/App.entitlements;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(VPN_TEST_BUNDLE_IDENTIFIER)";
+				ROUTE_VALIDATION_PINNED_ADDRESS = "";
+				SKIP_INSTALL = NO;
+				CURRENT_PROJECT_VERSION = 15;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Configuration/VPNTest/App-Info.plist";
+				INFOPLIST_KEY_BrandBootstrapResource = "$(BRAND_BOOTSTRAP_RESOURCE)";
+				INFOPLIST_KEY_BrandFixtureProfilesResource = "$(BRAND_FIXTURE_PROFILES_RESOURCE)";
+				INFOPLIST_KEY_BrandLocalLogoResource = "$(BRAND_LOCAL_LOGO_RESOURCE)";
+				INFOPLIST_KEY_BrandNetworkResource = "$(BRAND_NETWORK_RESOURCE)";
+				INFOPLIST_KEY_BrandThemeResource = "$(BRAND_THEME_RESOURCE)";
+				INFOPLIST_KEY_CFBundleDisplayName = "$(BRAND_DISPLAY_NAME) VPN";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIFixtureResource = "$(UI_FIXTURE_RESOURCE)";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.2.0;
+				PRODUCT_MODULE_NAME = NetworkClient;
+				PRODUCT_NAME = NetworkClientVPNTest;
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = iOSAdapters/Mihomo/Mihomo-Bridging-Header.h;
+				OTHER_LDFLAGS = "$(inherited) -lresolv";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) NETWORKCLIENT_VPN_TEST";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D8E01E3D99400C02B115B725 /* Debug */ = {isa = XCBuildConfiguration; baseConfigurationReference = A0B100000000000000000002 /* Configuration/Public.xcconfig */; buildSettings = {APPLICATION_EXTENSION_API_ONLY = YES; CODE_SIGN_ENTITLEMENTS = NetworkPacketTunnel/PacketTunnel.entitlements; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 15; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = NetworkPacketTunnel/Info.plist; IPHONEOS_DEPLOYMENT_TARGET = 17.0; MARKETING_VERSION = 0.2.0; OTHER_LDFLAGS = "$(inherited) -lresolv"; PRODUCT_BUNDLE_IDENTIFIER = "$(NETWORK_PACKET_TUNNEL_BUNDLE_ID)"; PRODUCT_MODULE_NAME = NetworkPacketTunnel; PRODUCT_NAME = NetworkPacketTunnel; SKIP_INSTALL = NO; SWIFT_STRICT_CONCURRENCY = complete; SWIFT_VERSION = 6.0; TARGETED_DEVICE_FAMILY = "1,2"; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; SUPPORTS_MACCATALYST = NO; SDKROOT = iphoneos; SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;}; name = Debug; };
+		9789117369994F7DFBC78281 /* Release */ = {isa = XCBuildConfiguration; baseConfigurationReference = A0B100000000000000000002 /* Configuration/Public.xcconfig */; buildSettings = {APPLICATION_EXTENSION_API_ONLY = YES; CODE_SIGN_ENTITLEMENTS = NetworkPacketTunnel/PacketTunnel.entitlements; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 15; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = NetworkPacketTunnel/Info.plist; IPHONEOS_DEPLOYMENT_TARGET = 17.0; MARKETING_VERSION = 0.2.0; OTHER_LDFLAGS = "$(inherited) -lresolv"; PRODUCT_BUNDLE_IDENTIFIER = "$(NETWORK_PACKET_TUNNEL_BUNDLE_ID)"; PRODUCT_MODULE_NAME = NetworkPacketTunnel; PRODUCT_NAME = NetworkPacketTunnel; SKIP_INSTALL = NO; SWIFT_STRICT_CONCURRENCY = complete; SWIFT_VERSION = 6.0; TARGETED_DEVICE_FAMILY = "1,2"; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; SUPPORTS_MACCATALYST = NO; SDKROOT = iphoneos;}; name = Release; };
+
+		A0B200000000000000000001 /* Debug-Public */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0B100000000000000000002 /* Configuration/Public.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				MIHOMO_SDK_ROOT = "$(SRCROOT)/Vendor/Mihomo";
+			};
+			name = "Debug-Public";
+		};
+		A0B200000000000000000002 /* Release-Public */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0B100000000000000000002 /* Configuration/Public.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				MIHOMO_SDK_ROOT = "$(SRCROOT)/Vendor/Mihomo";
+			};
+			name = "Release-Public";
+		};
+		A0B210000000000000000001 /* Debug-Public */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0B100000000000000000002 /* Configuration/Public.xcconfig */;
+			buildSettings = {
+				INCLUDE_TEST_FIXTURES = YES;
+				CODE_SIGN_ENTITLEMENTS = Configuration/App.entitlements;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "$(BRAND_APP_ICON)";
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 15;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Configuration/App-Info.plist";
+				INFOPLIST_KEY_BrandBootstrapResource = "$(BRAND_BOOTSTRAP_RESOURCE)";
+				INFOPLIST_KEY_BrandFixtureProfilesResource = "$(BRAND_FIXTURE_PROFILES_RESOURCE)";
+				INFOPLIST_KEY_BrandLocalLogoResource = "$(BRAND_LOCAL_LOGO_RESOURCE)";
+				INFOPLIST_KEY_BrandNetworkResource = "$(BRAND_NETWORK_RESOURCE)";
+				INFOPLIST_KEY_BrandThemeResource = "$(BRAND_THEME_RESOURCE)";
+				INFOPLIST_KEY_CFBundleDisplayName = "$(BRAND_DISPLAY_NAME)";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIFixtureResource = "$(UI_FIXTURE_RESOURCE)";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.2.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_MODULE_NAME = NetworkClient;
+				PRODUCT_NAME = NetworkClient;
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = iOSAdapters/Mihomo/Mihomo-Bridging-Header.h;
+				OTHER_LDFLAGS = "$(inherited) -lresolv";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "Debug-Public";
+		};
+		A0B210000000000000000002 /* Release-Public */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0B100000000000000000002 /* Configuration/Public.xcconfig */;
+			buildSettings = {
+				INCLUDE_TEST_FIXTURES = NO;
+				CODE_SIGN_ENTITLEMENTS = Configuration/App.entitlements;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "$(BRAND_APP_ICON)";
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 15;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Configuration/App-Info.plist";
+				INFOPLIST_KEY_BrandBootstrapResource = "$(BRAND_BOOTSTRAP_RESOURCE)";
+				INFOPLIST_KEY_BrandFixtureProfilesResource = "$(BRAND_FIXTURE_PROFILES_RESOURCE)";
+				INFOPLIST_KEY_BrandLocalLogoResource = "$(BRAND_LOCAL_LOGO_RESOURCE)";
+				INFOPLIST_KEY_BrandNetworkResource = "$(BRAND_NETWORK_RESOURCE)";
+				INFOPLIST_KEY_BrandThemeResource = "$(BRAND_THEME_RESOURCE)";
+				INFOPLIST_KEY_CFBundleDisplayName = "$(BRAND_DISPLAY_NAME)";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIFixtureResource = "$(UI_FIXTURE_RESOURCE)";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.2.0;
+				PRODUCT_MODULE_NAME = NetworkClient;
+				PRODUCT_NAME = NetworkClient;
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = iOSAdapters/Mihomo/Mihomo-Bridging-Header.h;
+				OTHER_LDFLAGS = "$(inherited) -lresolv";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "Release-Public";
+		};
+		A0B220000000000000000001 /* Debug-Public */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0B100000000000000000002 /* Configuration/Public.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(UNIT_TEST_BUNDLE_IDENTIFIER)";
+				PRODUCT_MODULE_NAME = NetworkClientTests;
+				PRODUCT_NAME = NetworkClientTests;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NetworkClient.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NetworkClient";
+			};
+			name = "Debug-Public";
+		};
+		A0B220000000000000000002 /* Release-Public */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0B100000000000000000002 /* Configuration/Public.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(UNIT_TEST_BUNDLE_IDENTIFIER)";
+				PRODUCT_MODULE_NAME = NetworkClientTests;
+				PRODUCT_NAME = NetworkClientTests;
+				SDKROOT = iphoneos;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NetworkClient.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NetworkClient";
+			};
+			name = "Release-Public";
+		};
+		A0B230000000000000000001 /* Debug-Public */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0B100000000000000000002 /* Configuration/Public.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(UI_TEST_BUNDLE_IDENTIFIER)";
+				PRODUCT_MODULE_NAME = NetworkClientUITests;
+				PRODUCT_NAME = NetworkClientUITests;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NetworkClient;
+			};
+			name = "Debug-Public";
+		};
+		A0B230000000000000000002 /* Release-Public */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0B100000000000000000002 /* Configuration/Public.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(UI_TEST_BUNDLE_IDENTIFIER)";
+				PRODUCT_MODULE_NAME = NetworkClientUITests;
+				PRODUCT_NAME = NetworkClientUITests;
+				SDKROOT = iphoneos;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NetworkClient;
+			};
+			name = "Release-Public";
+		};
+		A0B240000000000000000001 /* Debug-Public */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0B100000000000000000002 /* Configuration/Public.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "$(BRAND_APP_ICON)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Configuration/VPNTest/App.entitlements;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(VPN_TEST_BUNDLE_IDENTIFIER)";
+				ROUTE_VALIDATION_PINNED_ADDRESS = "";
+				SKIP_INSTALL = NO;
+				CURRENT_PROJECT_VERSION = 15;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Configuration/VPNTest/App-Info.plist";
+				INFOPLIST_KEY_BrandBootstrapResource = "$(BRAND_BOOTSTRAP_RESOURCE)";
+				INFOPLIST_KEY_BrandFixtureProfilesResource = "$(BRAND_FIXTURE_PROFILES_RESOURCE)";
+				INFOPLIST_KEY_BrandLocalLogoResource = "$(BRAND_LOCAL_LOGO_RESOURCE)";
+				INFOPLIST_KEY_BrandNetworkResource = "$(BRAND_NETWORK_RESOURCE)";
+				INFOPLIST_KEY_BrandThemeResource = "$(BRAND_THEME_RESOURCE)";
+				INFOPLIST_KEY_CFBundleDisplayName = "$(BRAND_DISPLAY_NAME) VPN";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIFixtureResource = "$(UI_FIXTURE_RESOURCE)";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.2.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_MODULE_NAME = NetworkClient;
+				PRODUCT_NAME = NetworkClientVPNTest;
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = iOSAdapters/Mihomo/Mihomo-Bridging-Header.h;
+				OTHER_LDFLAGS = "$(inherited) -lresolv";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG NETWORKCLIENT_VPN_TEST";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "Debug-Public";
+		};
+		A0B240000000000000000002 /* Release-Public */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0B100000000000000000002 /* Configuration/Public.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "$(BRAND_APP_ICON)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Configuration/VPNTest/App.entitlements;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(VPN_TEST_BUNDLE_IDENTIFIER)";
+				ROUTE_VALIDATION_PINNED_ADDRESS = "";
+				SKIP_INSTALL = NO;
+				CURRENT_PROJECT_VERSION = 15;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Configuration/VPNTest/App-Info.plist";
+				INFOPLIST_KEY_BrandBootstrapResource = "$(BRAND_BOOTSTRAP_RESOURCE)";
+				INFOPLIST_KEY_BrandFixtureProfilesResource = "$(BRAND_FIXTURE_PROFILES_RESOURCE)";
+				INFOPLIST_KEY_BrandLocalLogoResource = "$(BRAND_LOCAL_LOGO_RESOURCE)";
+				INFOPLIST_KEY_BrandNetworkResource = "$(BRAND_NETWORK_RESOURCE)";
+				INFOPLIST_KEY_BrandThemeResource = "$(BRAND_THEME_RESOURCE)";
+				INFOPLIST_KEY_CFBundleDisplayName = "$(BRAND_DISPLAY_NAME) VPN";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIFixtureResource = "$(UI_FIXTURE_RESOURCE)";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.2.0;
+				PRODUCT_MODULE_NAME = NetworkClient;
+				PRODUCT_NAME = NetworkClientVPNTest;
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = iOSAdapters/Mihomo/Mihomo-Bridging-Header.h;
+				OTHER_LDFLAGS = "$(inherited) -lresolv";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) NETWORKCLIENT_VPN_TEST";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "Release-Public";
+		};
+		A0B250000000000000000001 /* Debug-Public */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0B100000000000000000002 /* Configuration/Public.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = NetworkPacketTunnel/PacketTunnel.entitlements;
+				CURRENT_PROJECT_VERSION = 15;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = NetworkPacketTunnel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.2.0;
+				OTHER_LDFLAGS = "$(inherited) -lresolv";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(NETWORK_PACKET_TUNNEL_BUNDLE_ID)";
+				PRODUCT_MODULE_NAME = NetworkPacketTunnel;
+				PRODUCT_NAME = NetworkPacketTunnel;
+				SKIP_INSTALL = NO;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+			};
+			name = "Debug-Public";
+		};
+		A0B250000000000000000002 /* Release-Public */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0B100000000000000000002 /* Configuration/Public.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = NetworkPacketTunnel/PacketTunnel.entitlements;
+				CURRENT_PROJECT_VERSION = 15;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = NetworkPacketTunnel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.2.0;
+				OTHER_LDFLAGS = "$(inherited) -lresolv";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(NETWORK_PACKET_TUNNEL_BUNDLE_ID)";
+				PRODUCT_MODULE_NAME = NetworkPacketTunnel;
+				PRODUCT_NAME = NetworkPacketTunnel;
+				SKIP_INSTALL = NO;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SDKROOT = iphoneos;
+			};
+			name = "Release-Public";
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		47BBC71898C1B0EA1045A288 /* Build configuration list for PBXNativeTarget "NetworkClientUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94C1D7A82E2F92E70C5BA5D8 /* Debug */,
+				9609A256A79253DD705A918E /* Release */,
+				A0B230000000000000000001 /* Debug-Public */,
+				A0B230000000000000000002 /* Release-Public */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		60EA43DB068BD71C9709BED5 /* Build configuration list for PBXNativeTarget "NetworkClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9B2E96ABC5F6856F2BE79CF /* Debug */,
+				5A8C91857F674E16E2724F47 /* Release */,
+				A0B210000000000000000001 /* Debug-Public */,
+				A0B210000000000000000002 /* Release-Public */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		862894B703A6DEDF96A9DD6C /* Build configuration list for PBXProject "NetworkClient-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89E1FD6268CC0F221A2BE178 /* Debug */,
+				E6DE6C99132752C914FEF632 /* Release */,
+				A0B200000000000000000001 /* Debug-Public */,
+				A0B200000000000000000002 /* Release-Public */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87F2532CB576F7CE6EB48F72 /* Build configuration list for PBXNativeTarget "NetworkClientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCB48D8F88BCDB0ED9FADFD7 /* Debug */,
+				942EEBBACD6C88CAE7F29B29 /* Release */,
+				A0B220000000000000000001 /* Debug-Public */,
+				A0B220000000000000000002 /* Release-Public */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFF88057BD06C19263BA3F51 /* Build configuration list for PBXNativeTarget "NetworkClientVPNTest" */ = {isa = XCConfigurationList; buildConfigurations = (31C496D7538F1758AEDA3E7C /* Debug */, 1D55C4D049A7162A51086688 /* Release */, A0B240000000000000000001 /* Debug-Public */, A0B240000000000000000002 /* Release-Public */); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		128DB953DD964EE3247F37E0 /* Build configuration list for PBXNativeTarget "NetworkPacketTunnel" */ = {isa = XCConfigurationList; buildConfigurations = (D8E01E3D99400C02B115B725 /* Debug */, 9789117369994F7DFBC78281 /* Release */, A0B250000000000000000001 /* Debug-Public */, A0B250000000000000000002 /* Release-Public */); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		54039552E5DA64155F69E8DA /* XCLocalSwiftPackageReference "Vendor/Yams" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Vendor/Yams;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1CE20F2F49D079F7DA16C6FA /* Yams */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 54039552E5DA64155F69E8DA /* XCLocalSwiftPackageReference "Vendor/Yams" */;
+			productName = Yams;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 98F54143AB4E86B28C3AFEE0 /* Project object */;
+}

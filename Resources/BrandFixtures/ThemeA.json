@@ -1,0 +1,80 @@
+{
+  "colors": {
+    "background": [
+      "F4F6F8",
+      "13171C"
+    ],
+    "card": [
+      "FFFFFF",
+      "1E2329"
+    ],
+    "field": [
+      "F8FAFC",
+      "272D34"
+    ],
+    "text": [
+      "151C2B",
+      "EEF2F7"
+    ],
+    "secondary": [
+      "66758A",
+      "B1BBC8"
+    ],
+    "tertiary": [
+      "7F8B9D",
+      "8B97A6"
+    ],
+    "border": [
+      "E3E8EF",
+      "3F4852"
+    ],
+    "divider": [
+      "E3E8EF",
+      "373F48"
+    ],
+    "accent": [
+      "16B88F",
+      "16B88F"
+    ],
+    "emphasis": [
+      "16B88F",
+      "16B88F"
+    ],
+    "tint": [
+      "E8F8F2",
+      "153931"
+    ],
+    "error": [
+      "E5484D",
+      "FF7B80"
+    ],
+    "website": [
+      "29B64B",
+      "4ED26B"
+    ],
+    "support": [
+      "2B8CFF",
+      "64A9FF"
+    ],
+    "warning": [
+      "FF7A1A",
+      "FF9A4F"
+    ],
+    "onAccent": [
+      "FFFFFF",
+      "FFFFFF"
+    ],
+    "announcement": [
+      "AF52DE",
+      "BF5AF2"
+    ],
+    "success": [
+      "19A982",
+      "48D3AA"
+    ],
+    "shadow": [
+      "5B677814",
+      "00000057"
+    ]
+  }
+}

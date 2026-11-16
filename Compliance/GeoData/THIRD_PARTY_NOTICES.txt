@@ -1,0 +1,55 @@
+THIRD-PARTY NOTICES FOR GEODATA CANDIDATES
+=================================================
+
+These notices describe candidate GeoData outputs. They do not constitute
+release approval.
+
+DB-IP Country Lite
+------------------
+
+Data source: DB-IP Country Lite
+Source version: 2026-11
+Official dataset page: https://db-ip.com/db/download/ip-to-country-lite
+Official download host: https://download.db-ip.com
+License: Creative Commons Attribution 4.0 International (CC-BY-4.0)
+License text: https://creativecommons.org/licenses/by/4.0/legalcode
+
+Attribution: IP Geolocation by DB-IP (https://db-ip.com)
+
+The Country Lite database contents are supplied by DB-IP. For the candidate
+output, the official gzip archive is decompressed, the MMDB database bytes are
+left unchanged, and the file is renamed to `geoip.metadb` solely for
+application compatibility.
+
+V2Fly domain-list-community
+---------------------------
+
+Project: V2Fly/domain-list-community
+Repository: https://github.com/v2fly/domain-list-community.git
+Fixed commit: 777d056afe68b2643c1ef15f80e7bde3dfa149b1
+License: MIT
+
+The candidate `geosite.dat` is generated from this fixed source. The
+candidate `cn.mrs` is a derived data artifact compiled from the `cn`
+category of that same candidate `geosite.dat`. The complete upstream MIT
+License text is included in
+`LICENSES/v2fly-domain-list-community-MIT.txt`.
+
+ProjectClash generator
+----------------------
+
+Project: ProjectClash/Clash
+Repository: https://github.com/ProjectClash/Clash.git
+Fixed tag: v1.19.33-clash.2
+Fixed commit: 34d0a954c50a9233bc216e3cb73a016397fdad5b
+Generator function: component/geodata.CompileGeoSite
+Category: cn
+Generator source license: GPL-3.0-only
+
+ProjectClash/Clash is used here as the fixed tool that compiles `cn.mrs`.
+This notice records the generator and does not make a legal conclusion that
+the generated data artifact automatically adopts the generator's license.
+
+The separate licensing and distribution review for the Mihomo / ProjectClash
+SDK remains an independent release blocker and is not resolved by these
+candidate GeoData materials. The public snapshot omits the compiled framework.

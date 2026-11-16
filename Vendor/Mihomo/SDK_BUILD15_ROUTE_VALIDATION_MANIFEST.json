@@ -1,0 +1,58 @@
+{
+  "schema": 1,
+  "purpose": "isolated Build 15 physical-route validation; not a production release",
+  "upstreamRepository": "ProjectClash/Clash",
+  "upstreamTag": "v1.19.33-clash.2",
+  "upstreamCommit": "34d0a954c50a9233bc216e3cb73a016397fdad5b",
+  "coreVersion": "1.19.33",
+  "patches": [
+    {
+      "path": "0002-ios-app-profile-private-cache.patch",
+      "sha256": "acd607660049ebae6a49e9d368fc4f58886d89e68d9c95d614fdacf2f8c1fc1b"
+    },
+    {
+      "path": "0003-fail-closed-physical-path.patch",
+      "sha256": "dce110330e486161ac42e634eeb8ef7b6ed66322dd140d2cb73b8bcbd160dd36"
+    },
+    {
+      "path": "0004-route-validation-hook-evidence.patch",
+      "sha256": "6370956898224052cd1741341f654512cc45656dc87b7a79e01afbdb57c90862",
+      "scope": "applied to both variants; diagnostic exports require clash_internal and are absent from production"
+    },
+    {
+      "path": "0005-control-socket-path.patch",
+      "sha256": "6e78674a188988d9f6790ae22d0a3ea0f36377967b8f81a8e368b6d939330ddf",
+      "scope": "optional initial Setup ClashAPISocketPath; empty preserves BasePath/clash.sock and the Darwin 103-byte gate"
+    }
+  ],
+  "toolchain": {
+    "xcode": "27.2",
+    "go": "1.26.10",
+    "gomobile": "v0.1.13"
+  },
+  "effectiveGoTags": ["with_gvisor", "cmfa", "with_quic", "with_low_memory", "no_easytier"],
+  "buildCommand": "python3 Scripts/build-mihomo-sdk.py --source <pinned-local-clone> --output-root <new-external-directory> --go-bin-dir <go-bin-directory> --gomobile-bin-dir <gomobile-bin-directory>",
+  "productionGoTags": ["with_gvisor", "cmfa", "with_quic", "with_low_memory", "no_easytier"],
+  "diagnosticGoTags": ["with_gvisor", "cmfa", "with_quic", "clash_internal", "with_low_memory", "no_easytier"],
+  "xcodeSelection": {
+    "production": "MIHOMO_SDK_ROOT=$(SRCROOT)/Vendor/Mihomo",
+    "diagnostic": "MIHOMO_SDK_ROOT=<new-external-directory>/diagnostic with ROUTE_VALIDATION compilation condition"
+  },
+  "frameworkSHA256": {
+    "iosDevice": "a553ec85416be82fde4dd18ebbeea4260a5767dd13eb28570350fab686d32815",
+    "iosSimulator": "3a6369da7105c3338aac88a09ccbb2e3a221eeb82bf71dee9b223a93d6ea4fe3"
+  },
+  "preAlignmentFrameworkSHA256": {
+    "iosDevice": "681a2b62649400b43ea5ed51cf168343b2c63df10fa5c845713919f0c1c2473b",
+    "iosSimulator": "72304405156a6f5e07a34edebc30239e31165a2d5080f5aa9e1c000c2cb0e3a3"
+  },
+  "isolatedDiagnosticFrameworkSHA256": {
+    "iosDevice": "f8b9623b7dc829cfe46bb590749c7e359a21f82c139de60e94bfbb75aa094618",
+    "iosSimulator": "26e8aaaa3fe114a5e75558bf861b88b7eb25bdb23da96c3660f61028a0abb95f"
+  },
+  "baselineFrameworkSHA256": {
+    "iosDevice": "cab46aef867eb98528c0eb75508c3d82e61872762a652e6caeccfd867d1ee026",
+    "iosSimulator": "bfe2fe7ccc984c084413e4cddb3f2c962b896a1fdc316f28d12833e833e11da8"
+  },
+  "validationStatus": "Isolated iPhone 16 test verified physical Wi-Fi and cellular binding, packet forwarding, fresh IPv4 HTTPS requests through two authorized node countries, last-intent node selection, and one private-IPv4 DIRECT rule while includeAllNetworks remained enabled. Foreground status overwrite was fixed and retested; two Safari-return connections succeeded but the historical stall was not reproduced. This remains partial route validation: live no-path failure, UDP/QUIC, IPv6, broader protocols, runtime rollback, GeoData redistribution and peak extension memory require validation before a Build 15 release."
+}

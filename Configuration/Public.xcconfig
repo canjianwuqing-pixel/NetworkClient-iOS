@@ -1,0 +1,10 @@
+#include "Base.xcconfig"
+
+// Generic defaults for the public source build.
+BUILD_FLAVOR = Public
+BRAND_DISPLAY_NAME = NetworkClient
+APP_BASE_BUNDLE_ID = org.example.networkclient.ios
+DEVELOPMENT_TEAM =
+BOOTSTRAP_INPUT_PATH = $(SRCROOT)/Resources/bootstrap.json
+BRAND_SOURCE_IMAGE_PATH = $(SRCROOT)/Resources/Assets.xcassets/AppIcon.appiconset/AppIcon.png
+BRAND_APP_ICON = AppIcon

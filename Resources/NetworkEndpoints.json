@@ -1,0 +1,30 @@
+{
+  "apiRoot": "/api/v1",
+  "latencyTestURL": "https://latency.example.invalid/generate_204",
+  "paths": {
+    "loginPath": "/passport/auth/login",
+    "registrationConfigPath": "/guest/comm/config",
+    "registerPath": "/passport/auth/register",
+    "sendEmailVerificationPath": "/passport/comm/sendEmailVerify",
+    "forgotPasswordPath": "/passport/auth/forget",
+    "subscriptionInfoPath": "/user/getSubscribe",
+    "userInfoPath": "/user/info",
+    "planListPath": "/user/plan/fetch",
+    "guestPlanListPath": "/guest/plan/fetch",
+    "noticeListPath": "/user/notice/fetch",
+    "couponCheckPath": "/user/coupon/check",
+    "orderListPath": "/user/order/fetch",
+    "orderSavePath": "/user/order/save",
+    "orderDetailPath": "/user/order/detail",
+    "orderCheckPath": "/user/order/check",
+    "orderPaymentMethodsPath": "/user/order/getPaymentMethod",
+    "orderCheckoutPath": "/user/order/checkout",
+    "orderCancelPath": "/user/order/cancel",
+    "inviteFetchPath": "/user/invite/fetch",
+    "inviteSavePath": "/user/invite/save",
+    "trafficLogPath": "/user/stat/getTrafficLog",
+    "changePasswordPath": "/user/changePassword",
+    "accountDeleteRequestPath": "/user/account/delete-request"
+  },
+  "customerServiceEmbed": "https://support.example.invalid/chat/embed/"
+}

@@ -1,0 +1,24 @@
+.DS_Store
+.build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+.swiftpm/
+*.xcresult
+LocalBuilds/
+Documentation/*.log
+Documentation/**/*.log
+
+# Local build configuration and signing material.
+Secrets.xcconfig
+Local.xcconfig
+*.p12
+*.pfx
+*.mobileprovision
+*.cer
+*.crt
+*.pem
+*.key
+.env
+.env.*
+!*.example

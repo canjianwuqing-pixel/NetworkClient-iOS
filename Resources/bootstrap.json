@@ -1,0 +1,7 @@
+{
+  "CloudConfig": [
+    "https://config.example.invalid/config.json",
+    "https://backup-config.example.invalid/config.json"
+  ],
+  "CloudUpdateHours": 1
+}

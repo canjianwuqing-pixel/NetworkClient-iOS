@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "allowedHosts": [
+    "github.com",
+    "download.db-ip.com",
+    "proxy.golang.org",
+    "sum.golang.org",
+    "go.dev",
+    "dl.google.com",
+    "creativecommons.org",
+    "db-ip.com"
+  ],
+  "geosite": {
+    "sourceName": "V2Fly domain-list-community",
+    "repoURL": "https://github.com/v2fly/domain-list-community.git",
+    "commit": "777d056afe68b2643c1ef15f80e7bde3dfa149b1",
+    "license": "MIT",
+    "licenseURL": "https://github.com/v2fly/domain-list-community/blob/777d056afe68b2643c1ef15f80e7bde3dfa149b1/LICENSE",
+    "licenseTextSHA256": "b9d84a22870d3f21c91a4c6e410c9cc51d00902f5233ad0c84011479244bf7d2",
+    "generatorCommand": "go run ./ --outputdir=<stage> --outputname=geosite.dat",
+    "expectedAuditPOC": {
+      "size": 2414151,
+      "sha256": "02ad51927d05608b672bbcdf37f37b94ce1fdb7dcd10852f367ed457ad56280b",
+      "twoBuildsMatched": true
+    }
+  },
+  "cnMRS": {
+    "generatorRepo": "https://github.com/ProjectClash/Clash.git",
+    "generatorTag": "v1.19.33-clash.2",
+    "generatorCommit": "34d0a954c50a9233bc216e3cb73a016397fdad5b",
+    "generatorFunction": "component/geodata.CompileGeoSite",
+    "category": "cn",
+    "licenseOfGenerator": "GPL-3.0-only",
+    "licenseURL": "https://github.com/ProjectClash/Clash/blob/34d0a954c50a9233bc216e3cb73a016397fdad5b/LICENSE",
+    "input": "same-build:geosite.dat",
+    "expectedAuditPOC": {
+      "size": 44940,
+      "sha256": "ffb5b4311029519a52066711a75a38a5f27d9aa6357778342429babe21cff92c",
+      "twoBuildsMatched": true
+    }
+  },
+  "geoip": {
+    "sourceName": "DB-IP Country Lite",
+    "officialURL": "https://download.db-ip.com/free/dbip-country-lite-2026-11.mmdb.gz",
+    "sourceVersion": "2026-11",
+    "archiveFilename": "dbip-country-lite-2026-11.mmdb.gz",
+    "archiveSHA256": "75fe430010f6d38a8c4331c202bf0df6ce3221a6e6d823b9e5a6d951e4cf9758",
+    "payloadSHA256": "145ce5dfb812d8de28547e6289bb5c5f8b3df2f1dea21d324d5b575e0431311f",
+    "databaseType": "DBIP-Country-Lite",
+    "license": "CC-BY-4.0",
+    "licenseURL": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "licenseTextURL": "https://creativecommons.org/licenses/by/4.0/legalcode.txt",
+    "licenseTextSHA256": "9e5f1b3c610b9c2da5c313bf81d577a7d1acec686bdb0384edefa6df0f90cd94",
+    "datasetURL": "https://db-ip.com/db/download/ip-to-country-lite",
+    "attributionURL": "https://db-ip.com",
+    "transformation": "gzip decompression and rename only; database bytes are unchanged",
+    "maximumDownloadBytes": 33554432,
+    "maximumPayloadBytes": 67108864,
+    "validationSamples": {
+      "cn": {
+        "ip": "223.5.5.5",
+        "expectedCode": "cn",
+        "reason": "Public AliDNS resolver address; stable infrastructure sample, never a user address"
+      },
+      "nonCN": {
+        "ip": "1.1.1.1",
+        "forbiddenCode": "cn",
+        "reason": "Public Cloudflare resolver address; stable infrastructure sample, never a user address"
+      }
+    }
+  },
+  "geositeValidationSamples": {
+    "cn": {
+      "domain": "baidu.com",
+      "expectedMatch": true
+    },
+    "nonCN": {
+      "domain": "example.com",
+      "expectedMatch": false
+    }
+  },
+  "toolchain": {
+    "goVersion": "1.26.10",
+    "goProxy": "https://proxy.golang.org",
+    "goSumDB": "sum.golang.org",
+    "darwinArm64ArchiveURL": "https://go.dev/dl/go1.26.10.darwin-arm64.tar.gz",
+    "darwinArm64ArchiveSHA256": "0b5183492292ada170f9b561a834863808dd02edba599e4ad0e89899330020b3",
+    "projectClashCommit": "34d0a954c50a9233bc216e3cb73a016397fdad5b"
+  }
+}

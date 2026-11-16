@@ -1,0 +1,278 @@
+--- a/bind/clash/hook.go
++++ b/bind/clash/hook.go
+@@ -49,11 +49,13 @@
+ 		return
+ 	}
+ 	dialer.SocketHookScopesInterfaceOnly = true
+-	dialer.DefaultSocketHook = func(_, address string, conn syscall.RawConn) error {
++	dialer.DefaultSocketHook = func(network, address string, conn syscall.RawConn) error {
+ 		if !interfaceScopableTarget(address) {
++			recordSocketHookOutcome(network, address, hookLocalBypass)
+ 			return nil
+ 		}
+ 		if publishedInterfaceIndex.Load() == 0 {
++			recordSocketHookOutcome(network, address, hookNoPath)
+ 			if noPathDialsLogged.CompareAndSwap(false, true) {
+ 				log.Warnln("[Apple] no physical path is published; outbound socket refused")
+ 			}
+@@ -64,7 +66,13 @@
+ 		if err := conn.Control(func(fd uintptr) {
+ 			ctrlErr = platform.AutoDetectInterfaceControl(int32(fd))
+ 		}); err != nil {
++			recordSocketHookOutcome(network, address, hookControlFailure)
+ 			return err
++		}
++		if ctrlErr != nil {
++			recordSocketHookOutcome(network, address, hookBindFailure)
++		} else {
++			recordSocketHookOutcome(network, address, hookBound)
+ 		}
+ 		return ctrlErr
+ 	}
+--- /dev/null
++++ b/bind/clash/hook_diagnostics_internal.go
+@@ -0,0 +1,119 @@
++//go:build clash_internal
++
++package clash
++
++import (
++	"context"
++	"encoding/json"
++	"errors"
++	"net"
++	"net/netip"
++	"strings"
++	"sync/atomic"
++	"time"
++
++	"github.com/ProjectClash/Clash/component/dialer"
++)
++
++type socketHookOutcome uint8
++
++const (
++	hookLocalBypass socketHookOutcome = iota
++	hookNoPath
++	hookControlFailure
++	hookBindFailure
++	hookBound
++	hookOutcomeCount
++)
++
++const (
++	hookTCP4 = iota
++	hookTCP6
++	hookUDP4
++	hookUDP6
++	hookUnknown
++	hookKindCount
++)
++
++var socketHookCounters [hookKindCount][hookOutcomeCount]atomic.Uint64
++
++var hookKindNames = [hookKindCount]string{"tcp4", "tcp6", "udp4", "udp6", "unknown"}
++var hookOutcomeNames = [hookOutcomeCount]string{
++	"localBypass", "noPhysicalPath", "rawControlFailure", "platformBindFailure", "bound",
++}
++
++func socketHookKind(network, address string) int {
++	var transport int
++	switch {
++	case strings.HasPrefix(strings.ToLower(network), "tcp"):
++		transport = hookTCP4
++	case strings.HasPrefix(strings.ToLower(network), "udp"):
++		transport = hookUDP4
++	default:
++		return hookUnknown
++	}
++	host, _, err := net.SplitHostPort(address)
++	if err != nil {
++		host = address
++	}
++	ip, err := netip.ParseAddr(host)
++	if err != nil {
++		return hookUnknown
++	}
++	if ip.Unmap().Is4() {
++		return transport
++	}
++	return transport + 1
++}
++
++func recordSocketHookOutcome(network, address string, outcome socketHookOutcome) {
++	socketHookCounters[socketHookKind(network, address)][outcome].Add(1)
++}
++
++// SocketHookDiagnosticsJSON is exported only by the isolated internal SDK.
++// It contains aggregate counters and no destination, credential or node data.
++// UDP includes QUIC; the hook cannot distinguish QUIC from other UDP sockets.
++func SocketHookDiagnosticsJSON() string {
++	result := make(map[string]map[string]uint64, hookKindCount)
++	for kind, name := range hookKindNames {
++		outcomes := make(map[string]uint64, hookOutcomeCount)
++		for outcome, label := range hookOutcomeNames {
++			outcomes[label] = socketHookCounters[kind][outcome].Load()
++		}
++		result[name] = outcomes
++	}
++	data, err := json.Marshal(result)
++	if err != nil {
++		return "{}"
++	}
++	return string(data)
++}
++
++// ProbeNoPathDial exercises the real SDK dialer-to-hook chain with a fixed
++// documentation address. It exists only in the isolated internal build.
++func ProbeNoPathDial(network string, ipv6 bool) string {
++	if network != "tcp" && network != "udp" {
++		return "invalid-test-kind"
++	}
++	if publishedInterfaceIndex.Load() != 0 {
++		return "physical-path-present"
++	}
++	address := "198.51.100.1:443"
++	if ipv6 {
++		address = "[2001:db8::1]:443"
++	}
++	ctx, cancel := context.WithTimeout(context.Background(), 2*time.Second)
++	defer cancel()
++	connection, err := dialer.DialContext(ctx, network, address)
++	if connection != nil {
++		_ = connection.Close()
++		return "unexpected-connected"
++	}
++	if errors.Is(err, ErrNoPhysicalPath) {
++		return "hook-refused"
++	}
++	if err == nil {
++		return "unexpected-no-error"
++	}
++	return "rejected-before-hook-or-other-error"
++}
+--- /dev/null
++++ b/bind/clash/hook_diagnostics_release.go
+@@ -0,0 +1,16 @@
++//go:build !clash_internal
++
++package clash
++
++type socketHookOutcome uint8
++
++const (
++	hookLocalBypass socketHookOutcome = iota
++	hookNoPath
++	hookControlFailure
++	hookBindFailure
++	hookBound
++)
++
++// The production SDK has no diagnostic state or exported fault interface.
++func recordSocketHookOutcome(_, _ string, _ socketHookOutcome) {}
+--- /dev/null
++++ b/bind/clash/hook_diagnostics_internal_test.go
+@@ -0,0 +1,103 @@
++//go:build clash_internal
++
++package clash
++
++import (
++	"encoding/json"
++	"errors"
++	"net"
++	"testing"
++
++	"github.com/ProjectClash/Clash/component/dialer"
++)
++
++func hookSnapshot(t *testing.T) map[string]map[string]uint64 {
++	t.Helper()
++	var result map[string]map[string]uint64
++	if err := json.Unmarshal([]byte(SocketHookDiagnosticsJSON()), &result); err != nil {
++		t.Fatal(err)
++	}
++	return result
++}
++
++func TestInternalHookCountersComeFromActualHook(t *testing.T) {
++	previousHook, previousTransform := dialer.DefaultSocketHook, dialer.DefaultAddressTransform
++	previousIndex := publishedInterfaceIndex.Load()
++	t.Cleanup(func() {
++		dialer.DefaultSocketHook, dialer.DefaultAddressTransform = previousHook, previousTransform
++		publishedInterfaceIndex.Store(previousIndex)
++		noPathDialsLogged.Store(false)
++	})
++	packet, err := net.ListenPacket("udp", "127.0.0.1:0")
++	if err != nil {
++		t.Fatal(err)
++	}
++	defer packet.Close()
++	raw, err := packet.(*net.UDPConn).SyscallConn()
++	if err != nil {
++		t.Fatal(err)
++	}
++	platform := &hookPlatform{enabled: true}
++	installSocketHook(platform)
++	publishedInterfaceIndex.Store(0)
++	before := hookSnapshot(t)
++	for _, test := range []struct{ network, address, kind string }{
++		{"tcp", "1.1.1.1:443", "tcp4"},
++		{"udp", "1.1.1.1:443", "udp4"},
++		{"tcp", "[2606:4700:4700::1111]:443", "tcp6"},
++		{"udp", "[2606:4700:4700::1111]:443", "udp6"},
++	} {
++		if err := dialer.DefaultSocketHook(test.network, test.address, raw); !errors.Is(err, ErrNoPhysicalPath) {
++			t.Fatalf("%s no-path hook = %v", test.kind, err)
++		}
++		if got := hookSnapshot(t)[test.kind]["noPhysicalPath"]; got != before[test.kind]["noPhysicalPath"]+1 {
++			t.Fatalf("%s hook count = %d", test.kind, got)
++		}
++	}
++	if platform.callCount != 0 {
++		t.Fatal("no-path requests reached platform binder")
++	}
++	platform.controlErr = errors.New("controlled bind failure")
++	publishedInterfaceIndex.Store(5)
++	before = hookSnapshot(t)
++	if err := dialer.DefaultSocketHook("udp", "1.1.1.1:443", raw); !errors.Is(err, platform.controlErr) {
++		t.Fatalf("bind error lost: %v", err)
++	}
++	if got := hookSnapshot(t)["udp4"]["platformBindFailure"]; got != before["udp4"]["platformBindFailure"]+1 {
++		t.Fatalf("platform error hook count = %d", got)
++	}
++	if got := SocketHookDiagnosticsJSON(); len(got) == 0 || len(got) > 2048 {
++		t.Fatal("unexpected diagnostics size")
++	}
++}
++
++func TestInternalNoPathProbeUsesRealDialer(t *testing.T) {
++	previousHook, previousTransform := dialer.DefaultSocketHook, dialer.DefaultAddressTransform
++	previousIndex := publishedInterfaceIndex.Load()
++	t.Cleanup(func() {
++		dialer.DefaultSocketHook, dialer.DefaultAddressTransform = previousHook, previousTransform
++		publishedInterfaceIndex.Store(previousIndex)
++		noPathDialsLogged.Store(false)
++	})
++	installSocketHook(&hookPlatform{enabled: true})
++	publishedInterfaceIndex.Store(0)
++	for _, test := range []struct {
++		network string
++		ipv6    bool
++		kind    string
++	}{
++		{"tcp", false, "tcp4"}, {"udp", false, "udp4"},
++		{"tcp", true, "tcp6"}, {"udp", true, "udp6"},
++	} {
++		before := hookSnapshot(t)[test.kind]["noPhysicalPath"]
++		result := ProbeNoPathDial(test.network, test.ipv6)
++		got := hookSnapshot(t)[test.kind]["noPhysicalPath"]
++		if result == "hook-refused" {
++			if got <= before {
++				t.Fatalf("%s reported a hook refusal without a hook count", test.kind)
++			}
++		} else if !test.ipv6 || result != "rejected-before-hook-or-other-error" || got != before {
++			t.Fatalf("%s unexpected probe result=%s count=%d", test.kind, result, got)
++		}
++	}
++}

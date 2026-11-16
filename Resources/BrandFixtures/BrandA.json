@@ -1,0 +1,17 @@
+{
+  "AppName": "样例品牌 A",
+  "LoginTitle": "安全连接，自由随行",
+  "AppLogo": "https://brand-a.example.invalid/logo.png",
+  "HomePage": "https://brand-a.example.invalid",
+  "TelegramGroup": "https://brand-a.example.invalid/community",
+  "CustomerService": {
+    "enabled": true,
+    "mode": "url",
+    "content": "https://brand-a.example.invalid/support"
+  },
+  "UserAgent": "FixtureClient/1",
+  "ApiBaseUrls": [
+    "https://api-a.fixture.invalid"
+  ],
+  "BuiltInProxy": []
+}

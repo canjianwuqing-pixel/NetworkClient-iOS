@@ -1,0 +1,65 @@
+diff --git a/bind/clash/clash_api_test.go b/bind/clash/clash_api_test.go
+index b78ffeb..5cb79d2 100644
+--- a/bind/clash/clash_api_test.go
++++ b/bind/clash/clash_api_test.go
+@@ -71,6 +71,36 @@ func TestSetupOwnsClashAPIPath(t *testing.T) {
+ 	}
+ }
+ 
++func TestSetupOwnsExplicitClashAPISocketPath(t *testing.T) {
++	options := testOptions(t)
++	explicit := shortClashSocketPath(t)
++	options.ClashAPISocketPath = explicit
++	if err := Setup(options); err != nil {
++		t.Fatalf("Setup: %v", err)
++	}
++	if got := APIPath(); got != explicit {
++		t.Fatalf("APIPath() = %q, want explicit %q", got, explicit)
++	}
++	if err := startControlPlane(nil, APIPath()); err != nil {
++		t.Fatalf("startControlPlane explicit short path: %v", err)
++	}
++	stopClashAPI(APIPath())
++}
++
++func TestClashAPIRejectsOverlongExplicitUnixPath(t *testing.T) {
++	path := "/" + strings.Repeat("x", clashAPIMaxUnixPathBytes)
++	if got := len([]byte(path)); got != clashAPIMaxUnixPathBytes+1 {
++		t.Fatalf("test path is %d bytes, want %d", got, clashAPIMaxUnixPathBytes+1)
++	}
++	err := startControlPlane(nil, path)
++	if err == nil {
++		t.Fatal("startControlPlane accepted an overlong explicit path")
++	}
++	if !strings.Contains(err.Error(), "Darwin limit is 103") {
++		t.Fatalf("unexpected error: %v", err)
++	}
++}
++
+ func TestNonNetworkExtensionStartKeepsClashAPIOff(t *testing.T) {
+ 	options := testOptions(t)
+ 	if err := Setup(options); err != nil {
+diff --git a/bind/clash/setup.go b/bind/clash/setup.go
+index b126b8c..dc2ea83 100644
+--- a/bind/clash/setup.go
++++ b/bind/clash/setup.go
+@@ -35,6 +35,7 @@ type SetupOptions struct {
+ 	BasePath                 string
+ 	WorkingPath              string
+ 	TempPath                 string
++	ClashAPISocketPath       string
+ 	TimeZone                 string
+ 	RuntimeProfile           string
+ 	LogMaxLines              int
+@@ -204,7 +205,10 @@ func Setup(options *SetupOptions) error {
+ 		phaseLogPath = filepath.Join(options.WorkingPath, "clash-core-phases.log")
+ 	}
+ 	configureStartupPhaseLogPath(phaseLogPath)
+-	setupClashAPIPath = filepath.Join(options.BasePath, clashAPISocketName)
++	setupClashAPIPath = options.ClashAPISocketPath
++	if setupClashAPIPath == "" {
++		setupClashAPIPath = filepath.Join(options.BasePath, clashAPISocketName)
++	}
+ 	setupOOMEvidencePath = filepath.Join(options.BasePath, oomEvidenceFileName)
+ 	setupGoCrashReportBasePath = options.BasePath
+ 	setupGoCrashReportRole = currentGoCrashRole()

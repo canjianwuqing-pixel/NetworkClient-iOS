@@ -1,0 +1,199 @@
+diff --git a/bind/clash/runtime_profile.go b/bind/clash/runtime_profile.go
+index 5a70069..0f7886f 100644
+--- a/bind/clash/runtime_profile.go
++++ b/bind/clash/runtime_profile.go
+@@ -11,6 +11,7 @@ const (
+ 	RuntimeProfileMacOSPacketTunnel = "macosPacketTunnel"
+ 	RuntimeProfileMacOSApplication  = "macosApplication"
+ 	RuntimeProfileTVOSPacketTunnel  = "tvosPacketTunnel"
++	RuntimeProfileIOSApplication    = "iosApplication"
+ )
+ 
+ type runtimeProfile uint32
+@@ -20,6 +21,7 @@ const (
+ 	runtimeProfileMacOSPacketTunnel
+ 	runtimeProfileMacOSApplication
+ 	runtimeProfileTVOSPacketTunnel
++	runtimeProfileIOSApplication
+ )
+ 
+ var setupRuntimeProfile atomic.Uint32
+@@ -49,13 +51,16 @@ func normalizeRuntimeProfile(value string) (runtimeProfile, error) {
+ 		return runtimeProfileMacOSApplication, nil
+ 	case RuntimeProfileTVOSPacketTunnel:
+ 		return runtimeProfileTVOSPacketTunnel, nil
++	case RuntimeProfileIOSApplication:
++		return runtimeProfileIOSApplication, nil
+ 	default:
+ 		return runtimeProfileIOSPacketTunnel, fmt.Errorf(
+-			"clash: invalid SetupOptions.RuntimeProfile %q; expected %q, %q, %q or %q",
++			"clash: invalid SetupOptions.RuntimeProfile %q; expected %q, %q, %q, %q or %q",
+ 			value,
+ 			RuntimeProfileIOSPacketTunnel,
+ 			RuntimeProfileMacOSPacketTunnel,
+ 			RuntimeProfileMacOSApplication,
++			RuntimeProfileIOSApplication,
+ 			RuntimeProfileTVOSPacketTunnel,
+ 		)
+ 	}
+@@ -146,6 +151,11 @@ func runtimePolicyFor(profile runtimeProfile, underNetworkExtension bool) appleR
+ 		policy.bindsUnixControlSocket = true
+ 		policy.trustedProcessMetadata = true
+ 		policy.useSystemDNS = true
++	case runtimeProfileIOSApplication:
++		// App-owned URLSession requests only: no NE, TUN or packet-tunnel DNS
++		// normalization even if the caller accidentally reports underNE=true.
++		policy.useSystemDNS = true
++		policy.memoryConservativeGeodata = true
+ 	}
+ 	return policy
+ }
+@@ -164,6 +174,8 @@ func (profile runtimeProfile) String() string {
+ 		return RuntimeProfileMacOSApplication
+ 	case runtimeProfileTVOSPacketTunnel:
+ 		return RuntimeProfileTVOSPacketTunnel
++	case runtimeProfileIOSApplication:
++		return RuntimeProfileIOSApplication
+ 	default:
+ 		return fmt.Sprintf("unknown(%d)", profile)
+ 	}
+diff --git a/bind/clash/runtime_profile_test.go b/bind/clash/runtime_profile_test.go
+index 73e7a98..7cb4346 100644
+--- a/bind/clash/runtime_profile_test.go
++++ b/bind/clash/runtime_profile_test.go
+@@ -17,6 +17,7 @@ func TestNormalizeRuntimeProfile(t *testing.T) {
+ 		{name: "iOS packet tunnel", input: RuntimeProfileIOSPacketTunnel, want: runtimeProfileIOSPacketTunnel},
+ 		{name: "macOS packet tunnel", input: RuntimeProfileMacOSPacketTunnel, want: runtimeProfileMacOSPacketTunnel},
+ 		{name: "macOS application", input: RuntimeProfileMacOSApplication, want: runtimeProfileMacOSApplication},
++		{name: "iOS application", input: RuntimeProfileIOSApplication, want: runtimeProfileIOSApplication},
+ 	}
+ 	for _, test := range tests {
+ 		t.Run(test.name, func(t *testing.T) {
+diff --git a/component/profile/cachefile/cache.go b/component/profile/cachefile/cache.go
+index 4062ffc..51f7417 100644
+--- a/component/profile/cachefile/cache.go
++++ b/component/profile/cachefile/cache.go
+@@ -21,7 +21,7 @@ var (
+ 	initialized  bool
+ 	disabled     bool
+ 	cachePath    string
+-	fileMode     os.FileMode = 0o666
++	fileMode     os.FileMode = 0o600
+ 	defaultCache *CacheFile
+ 
+ 	bucketSelected         = []byte("selected")
+@@ -139,6 +139,11 @@ func initCache() {
+ 		defaultCache = &CacheFile{}
+ 		return
+ 	}
++	if err := hardenExistingCacheFile(path); err != nil {
++		log.Warnln("[CacheFile] refusing unsafe cache file: %s", err.Error())
++		defaultCache = &CacheFile{}
++		return
++	}
+ 	options := bbolt.Options{Timeout: time.Second, NoStatistics: true}
+ 	db, err := bbolt.Open(path, fileMode, &options)
+ 	switch err {
+@@ -159,6 +164,25 @@ func initCache() {
+ 	}
+ }
+ 
++// bbolt's mode argument only applies when it creates a file. Tighten older
++// app-owned caches before opening them and refuse non-regular paths.
++func hardenExistingCacheFile(path string) error {
++	info, err := os.Lstat(path)
++	if errors.Is(err, os.ErrNotExist) {
++		return nil
++	}
++	if err != nil {
++		return err
++	}
++	if !info.Mode().IsRegular() {
++		return errors.New("cachefile: cache path is not a regular file")
++	}
++	if info.Mode().Perm()&0o077 != 0 {
++		return os.Chmod(path, fileMode)
++	}
++	return nil
++}
++
+ // Cache return singleton of CacheFile
+ func Cache() *CacheFile {
+ 	initOnce.Do(initCache)
+diff --git a/bind/clash/runtime_profile_ios_application_test.go b/bind/clash/runtime_profile_ios_application_test.go
+new file mode 100644
+index 0000000..cf8dc6a
+--- /dev/null
++++ b/bind/clash/runtime_profile_ios_application_test.go
+@@ -0,0 +1,17 @@
++package clash
++
++import "testing"
++
++func TestIOSApplicationHasNoPacketTunnelOrDNSRepair(t *testing.T) {
++	for _, underNE := range []bool{false, true} {
++		p := runtimePolicyFor(runtimeProfileIOSApplication, underNE)
++		if p.networkExtension || p.packetTunnel || p.requirePacketTunnelDNS ||
++			p.repairPacketTunnelDNS || p.stripLoopbackResolvers || p.bindsUnixControlSocket ||
++			p.trustedProcessMetadata || !p.useSystemDNS {
++			t.Fatalf("iOS application policy leaked tunnel behavior with underNE=%v: %+v", underNE, p)
++		}
++	}
++	if got, err := normalizeRuntimeProfile(RuntimeProfileIOSApplication); err != nil || got != runtimeProfileIOSApplication {
++		t.Fatalf("normalize iOS application = %v, %v", got, err)
++	}
++}
+diff --git a/component/profile/cachefile/private_mode_test.go b/component/profile/cachefile/private_mode_test.go
+new file mode 100644
+index 0000000..cf6e8e8
+--- /dev/null
++++ b/component/profile/cachefile/private_mode_test.go
+@@ -0,0 +1,48 @@
++package cachefile
++
++import (
++	"os"
++	"path/filepath"
++	"testing"
++)
++
++func TestPersistentCacheCreationModeIsPrivate(t *testing.T) {
++	if fileMode.Perm() != 0o600 {
++		t.Fatalf("cache.db creation mode = %04o, want 0600", fileMode.Perm())
++	}
++}
++
++func TestExistingCachePermissionsAreTightened(t *testing.T) {
++	path := filepath.Join(t.TempDir(), "cache.db")
++	if err := os.WriteFile(path, []byte("old-cache"), 0o644); err != nil {
++		t.Fatal(err)
++	}
++	if err := os.Chmod(path, 0o644); err != nil {
++		t.Fatal(err)
++	}
++	if err := hardenExistingCacheFile(path); err != nil {
++		t.Fatal(err)
++	}
++	info, err := os.Stat(path)
++	if err != nil {
++		t.Fatal(err)
++	}
++	if info.Mode().Perm() != 0o600 {
++		t.Fatalf("cache mode = %04o", info.Mode().Perm())
++	}
++}
++
++func TestCacheSymlinkIsRefused(t *testing.T) {
++	dir := t.TempDir()
++	target := filepath.Join(dir, "target")
++	link := filepath.Join(dir, "cache.db")
++	if err := os.WriteFile(target, nil, 0o600); err != nil {
++		t.Fatal(err)
++	}
++	if err := os.Symlink(target, link); err != nil {
++		t.Fatal(err)
++	}
++	if err := hardenExistingCacheFile(link); err == nil {
++		t.Fatal("symlink cache accepted")
++	}
++}

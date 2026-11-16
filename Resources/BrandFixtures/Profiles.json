@@ -1,0 +1,12 @@
+[
+  {
+    "config": "BrandA",
+    "theme": "ThemeA",
+    "logo": "LogoA"
+  },
+  {
+    "config": "BrandB",
+    "theme": "ThemeB",
+    "logo": "LogoB"
+  }
+]

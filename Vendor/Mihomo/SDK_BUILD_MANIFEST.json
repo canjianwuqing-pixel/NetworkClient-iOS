@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "purpose": "isolated phase-7 PoC only; not a distributable formal SDK",
+  "upstreamRepository": "ProjectClash/Clash",
+  "upstreamTag": "v1.19.33-clash.2",
+  "upstreamCommit": "34d0a954c50a9233bc216e3cb73a016397fdad5b",
+  "coreVersion": "1.19.33",
+  "patch": {
+    "path": "patches/0002-ios-app-profile-private-cache.patch",
+    "sha256": "acd607660049ebae6a49e9d368fc4f58886d89e68d9c95d614fdacf2f8c1fc1b"
+  },
+  "toolchain": {
+    "xcode": "27.1",
+    "go": "1.26.10",
+    "gomobile": "v0.1.13"
+  },
+  "effectiveGoTags": ["with_gvisor", "cmfa", "with_quic", "with_low_memory", "no_easytier"],
+  "build": "go run ./cmd/build_libbox -target apple -slices ios -output <external-output>/Clash-iOS-Phase7.xcframework",
+  "artifacts": {
+    "iosDeviceFrameworkSHA256": "cab46aef867eb98528c0eb75508c3d82e61872762a652e6caeccfd867d1ee026",
+    "iosSimulatorFrameworkSHA256": "bfe2fe7ccc984c084413e4cddb3f2c962b896a1fdc316f28d12833e833e11da8",
+    "iosSignedPoCExecutableSHA256": "a26b6b415f0357277ce83ee1da7ef380053754019d9f71e79523c1ba4ab8ad24",
+    "signedPoCBundleID": "org.networkclient.mihomo.poc",
+    "signedPoCTeam": "RTBT57LNMF"
+  },
+  "caveats": [
+    "SDK build recorded sourceDirty=true because a local patch was applied; reproduce from upstream commit plus the recorded patch.",
+    "No formal NetworkClient integration or distribution is authorized by this manifest.",
+    "Official Client and patched Adapter do not yet pass the Swift 6 call-site contract."
+  ]
+}
